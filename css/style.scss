@@ -1,3 +1,100 @@
 // Fonts - RM Weights = 300, 500, 700
 $font-primary: 'Roboto Mono', monospace;
 $font-heading: 'Poppins', sans-serif;
+$text-light: #fff;
+$text-dark: #333;
+$clr-primary: #103561;
+$clr-primary-light: #1f518c;
+$clr-primary-dark: #041c38;
+$clr-accent: #f0625b;
+
+*, 
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-family: $font-primary;
+  color: $text-dark;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+img {
+  max-width: 250px;
+  border: 0;
+}
+
+h1 {
+  background-color: $clr-primary-light;
+  padding: .45rem .8rem;
+  border-radius: 22px;
+  text-align: center;
+  font-size: clamp(.8rem, .8rem + .5vw, 1.2rem);
+  width: max-content;
+  margin: 1rem;
+}
+
+.main-img {
+  border-radius: 50%;
+  width: 200px;
+  overflow: hidden;
+}
+
+// home section styles
+.hero {
+  height: 100vh;
+  width: min(100%, 1460px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 12px solid $clr-primary-dark;
+
+  header {
+    background-color: $clr-primary;
+    color: $text-light;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .25rem;
+    padding: 2rem;
+  }
+
+  .portfolio-nav {
+    // background-color: $text-light;
+    background: orange;
+    width: 80%;
+    justify-self: flex-end;
+    padding: 1rem;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: none;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+}

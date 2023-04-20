@@ -7,7 +7,7 @@
   <!-- Icon CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Fonts -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto+Mono:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Wade C. Edwards</title>
 </head>
@@ -26,6 +26,22 @@
       <h1>Wade Edwards</h1>
       <h2>HTML Email Developer</h2>
       <h2>Frontend Developer</h2>
+      <nav>
+        <ul>
+          <li>
+            <i class="fa-solid fa-address-card"></i>
+            <span>Resume</span>
+          </li>
+          <li>
+            <i class="fa-brands fa-github"></i>
+            <span>Github</span>
+          </li>
+          <li>
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </li>
+        </ul>
+      </nav>
     </header>
     <nav>
       <ul>
@@ -39,12 +55,6 @@
           <button class="nav-btn portfolio-btn">
             <i class="fa-solid fa-lightbulb"></i>
             <span>Portfolio</span>
-          </button>
-        </li>
-        <li>
-          <button class="nav-btn resume-btn">
-            <i class="fa-solid fa-address-card"></i>
-            <span>Resume</span>
           </button>
         </li>
         <li>
@@ -117,7 +127,8 @@
     </article>
   </section>
 
-  <section class="portfolio">
+  <section class="portfolio" id="portfolio">
+    <h3>Portfolio Projects</h3>
     <div class="portfolio-card">
       <header>
         <img src="img/dummy-img.jpg" alt="Preview">
@@ -125,10 +136,84 @@
       <article>
         <a href="#">Some Business Promo</a>
         <span>Promotional HTML Email</span>
-        
+        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+      </article>
+    </div>
+    <div class="portfolio-card">
+      <header>
+        <img src="img/dummy-img.jpg" alt="Preview">
+      </header>
+      <article>
+        <a href="#">Cool Fashion Promo</a>
+        <span>Promotional HTML Email</span>
+        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+      </article>
+    </div>
+    <div class="portfolio-card">
+      <header>
+        <img src="img/dummy-img.jpg" alt="Preview">
+      </header>
+      <article>
+        <a href="#">Nifty New Newsletter</a>
+        <span>HTML Email Newsletter</span>
+        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+      </article>
+    </div>
+    <div class="portfolio-card">
+      <header>
+        <img src="img/dummy-img.jpg" alt="Preview">
+      </header>
+      <article>
+        <a href="#">Apple Transactional Receipt</a>
+        <span>Transactional HTML Email</span>
+        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+      </article>
+    </div>
+    <div class="portfolio-card">
+      <header>
+        <img src="img/dummy-img.jpg" alt="Preview">
+      </header>
+      <article>
+        <a href="#">The Best Promo Ever</a>
+        <span>Promotional HTML Email</span>
+        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+      </article>
+    </div>
+    <div class="portfolio-card">
+      <header>
+        <img src="img/dummy-img.jpg" alt="Preview">
+      </header>
+      <article>
+        <a href="#">Ricky Bobby's Newsletter</a>
+        <span>HTML Email Newsletter</span>
+        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
       </article>
     </div>
   </section>
+
+  <section class="contact" id="contact">
+    <h3>Contact Me</h3>
+    <div class="section-block">
+      <h4>Details</h4>
+      <div class="detail-group">
+        <figure>
+          <img src="img/details_location.jpg" alt="Location icon">
+          <figcaption>Based in Gadsden, AL</figcaption>
+        </figure>
+        <figure>
+          <img src="img/details_freelance.png" alt="Graphic of person working at a computer">
+          <figcaption>Freelance Available</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <button class="top">
+    <a href="#home">
+      <img src="img/arrow.svg" alt="Arrow pointing upwards">
+      <span>To Top</span>
+    </a>
+  </button>
   
 </body>
 </html>

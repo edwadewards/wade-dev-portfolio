@@ -1,0 +1,34 @@
+// Fonts - RM Weights = 300, 500, 700
+$font-primary: 'Roboto Mono', monospace;
+$font-heading: 'Poppins', sans-serif;
+$text-light: #fff;
+$text-dark: #333;
+$clr-primary: #103561;
+$clr-primary-light: #1f518c;
+$clr-primary-dark: #041c38;
+$clr-accent: #fa9e93;
+
+
+$spaceamounts: (1, 2, 3, 4, 5);
+
+@each $space in $spaceamounts {
+  // All around margin 
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+
+  // Vertical margin 
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+
+  // All around padding 
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+
+  // Vertical padding 
+  .py-#{$space} {
+    padding: #{$space}rem 0;
+  }
+}

@@ -1,12 +1,4 @@
-// Fonts - RM Weights = 300, 500, 700
-$font-primary: 'Roboto Mono', monospace;
-$font-heading: 'Poppins', sans-serif;
-$text-light: #fff;
-$text-dark: #333;
-$clr-primary: #103561;
-$clr-primary-light: #1f518c;
-$clr-primary-dark: #041c38;
-$clr-accent: #f0625b;
+@import 'config';
 
 *, 
 *::before,
@@ -41,14 +33,34 @@ img {
   border: 0;
 }
 
+a, i {
+  color: inherit;
+}
+
 h1 {
   background-color: $clr-primary-light;
   padding: .45rem .8rem;
   border-radius: 22px;
   text-align: center;
-  font-size: clamp(.8rem, .8rem + .5vw, 1.2rem);
+  font-size: .75rem;
   width: max-content;
   margin: 1rem;
+}
+
+h2, h3 {
+  font-size: 1rem;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-img {
@@ -71,14 +83,29 @@ h1 {
   header {
     background-color: $clr-primary;
     color: $text-light;
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
     gap: .25rem;
     padding: 2rem;
+
+    nav {
+      min-width: 20rem;
+      margin-top: 1.35rem;
+      padding-top: 1.35rem;
+      border-top: 1px solid $text-light;
+
+      >ul>li>a {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .35rem;
+
+        i {
+          font-size: 2rem;
+        }
+      }
+    }
   }
 
   .portfolio-nav {
@@ -98,3 +125,51 @@ h1 {
     }
   }
 }
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    font-size: 1.75rem;
+    text-transform: lowercase;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    max-width: 1000px;
+
+    &-heading {
+      text-decoration: underline;
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.text-highlight {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: .75rem;
+    left: 0;
+    height: .5rem;
+    width: 100%;
+    background-color: $clr-accent;
+    z-index: -1;
+  }
+}
+
+.card-skills {
+  gap: 3.75rem;
+}
+
+
+@import 'queries';

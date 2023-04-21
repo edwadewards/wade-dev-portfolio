@@ -1,3 +1,83 @@
+.m-1 {
+  margin: 1rem;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+
+.my-2 {
+  margin: 2rem 0;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.m-3 {
+  margin: 3rem;
+}
+
+.my-3 {
+  margin: 3rem 0;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.m-4 {
+  margin: 4rem;
+}
+
+.my-4 {
+  margin: 4rem 0;
+}
+
+.p-4 {
+  padding: 4rem;
+}
+
+.py-4 {
+  padding: 4rem 0;
+}
+
+.m-5 {
+  margin: 5rem;
+}
+
+.my-5 {
+  margin: 5rem 0;
+}
+
+.p-5 {
+  padding: 5rem;
+}
+
+.py-5 {
+  padding: 5rem 0;
+}
+
 *,
 *::before,
 *::after {
@@ -31,15 +111,35 @@ img {
   border: 0;
 }
 
+a, i {
+  color: inherit;
+}
+
 h1 {
   background-color: #1f518c;
   padding: 0.45rem 0.8rem;
   border-radius: 22px;
   text-align: center;
-  font-size: clamp(0.8rem, 0.8rem + 0.5vw, 1.2rem);
+  font-size: 0.75rem;
   width: -moz-max-content;
   width: max-content;
   margin: 1rem;
+}
+
+h2, h3 {
+  font-size: 1rem;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-img {
@@ -60,14 +160,26 @@ h1 {
 .hero header {
   background-color: #103561;
   color: #fff;
-  height: 100vh;
+  height: 100%;
   width: 100%;
+  gap: 0.25rem;
+  padding: 2rem;
+}
+.hero header nav {
+  min-width: 20rem;
+  margin-top: 1.35rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid #fff;
+}
+.hero header nav > ul > li > a {
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 0.25rem;
-  padding: 2rem;
+  gap: 0.35rem;
+}
+.hero header nav > ul > li > a i {
+  font-size: 2rem;
 }
 .hero .portfolio-nav {
   background: orange;
@@ -82,4 +194,54 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about h3 {
+  font-size: 1.75rem;
+  text-transform: lowercase;
+}
+.about .card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1000px;
+}
+.about .card-heading {
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.text-highlight {
+  position: relative;
+}
+.text-highlight:before {
+  content: "";
+  position: absolute;
+  top: 0.75rem;
+  left: 0;
+  height: 0.5rem;
+  width: 100%;
+  background-color: #fa9e93;
+  z-index: -1;
+}
+
+.card-skills {
+  gap: 3.75rem;
+}
+
+@media (min-width: 600px) {
+  .hero {
+    height: 90vh;
+    border-radius: 20px;
+  }
+  .hero header {
+    border-radius: 6px;
+  }
 }/*# sourceMappingURL=style.css.map */

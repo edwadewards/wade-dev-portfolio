@@ -107,7 +107,6 @@ button {
 }
 
 img {
-  max-width: 250px;
   border: 0;
 }
 
@@ -126,11 +125,18 @@ h1 {
   margin: 1rem;
 }
 
-h2, h3 {
+h2 {
   font-size: 1rem;
 }
 
-h1, h2, h3 {
+h3 {
+  font-size: 1.75rem;
+  text-transform: lowercase;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+h1, h2 {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -140,6 +146,10 @@ h1, h2, h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }
 
 .main-img {
@@ -202,15 +212,14 @@ h1, h2, h3 {
   align-items: center;
   justify-content: center;
 }
-.about h3 {
-  font-size: 1.75rem;
-  text-transform: lowercase;
-}
 .about .card {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  max-width: 1000px;
+  width: min(100%, 1100px);
+}
+.about .card img {
+  margin-right: 2rem;
 }
 .about .card-heading {
   text-decoration: underline;
@@ -233,7 +242,24 @@ h1, h2, h3 {
 }
 
 .card-skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 3.75rem;
+}
+
+.portfolio {
+  width: min(100%, 1000px);
+}
+.portfolio-card {
+  width: 100%;
+  gap: 1.25rem;
+  border: 1px solid green;
+}
+.portfolio-card img {
+  width: min(90%, 400px);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 600px) {

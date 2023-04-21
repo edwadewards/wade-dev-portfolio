@@ -13,6 +13,7 @@ body {
   place-items: center;
   font-family: $font-primary;
   color: $text-dark;
+  position: relative;
 }
 
 ul {
@@ -156,6 +157,11 @@ h1, h2 {
       text-decoration: underline;
       display: block;
       margin-bottom: 1.5rem;
+      color: $text-dark;
+    }
+
+    p {
+      color: $text-light-alt;
     }
   }
 }
@@ -189,15 +195,95 @@ h1, h2 {
   &-card {
     width: 100%;
     gap: 1.25rem;
-    border: 1px solid green;
+    border-bottom: 1px solid #333;
+
+    header {
+      display: grid;
+      place-items: center;
+    }
 
     img {
-      width: min(90%, 400px);
+      width: min(90%, 300px);
       box-shadow: 0 0 7px rgba(0, 0, 0, .15);
+    }
+
+    article {
+      .project-link {
+        font-size: 1.25rem;
+      }
+
+      span {
+        color: $text-light-alt;
+        margin: .25rem 0 .5rem 0;
+      }
+
+      .github-link {
+        background-color: $clr-primary;
+        color: $text-light;
+        padding: .5rem 1rem;
+        border-radius: 4px;
+        font-size: 1.15rem;
+
+        &:hover {
+          background-color: $clr-primary-light;
+        }
+      }
     }
   }
 }
 
+.contact {
+  width: min(100%, 1100px);
+
+  .detail-group {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+}
+
+.contact-form {
+  width: min(100%, 840px);
+
+  .flex-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    grid-template-rows: auto-fill;
+  }
+
+  .input-container, .flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  input, textarea {
+    border: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, .15);
+    padding: .25rem;
+    font-size: 1rem;
+  }
+
+  .submit-btn {
+    background-color: $clr-primary;
+    color: $text-light;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    width: max-content;
+
+    &:hover {
+      background-color: $clr-primary-light;
+    }
+  }
+}
+
+.top {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
+}
 
 
 @import 'queries';

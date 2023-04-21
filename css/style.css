@@ -91,6 +91,7 @@ body {
   place-items: center;
   font-family: "Roboto Mono", monospace;
   color: #333;
+  position: relative;
 }
 
 ul {
@@ -225,6 +226,10 @@ h1, h2 {
   text-decoration: underline;
   display: block;
   margin-bottom: 1.5rem;
+  color: #333;
+}
+.about .card p {
+  color: #646369;
 }
 
 .text-highlight {
@@ -255,11 +260,79 @@ h1, h2 {
 .portfolio-card {
   width: 100%;
   gap: 1.25rem;
-  border: 1px solid green;
+  border-bottom: 1px solid #333;
+}
+.portfolio-card header {
+  display: grid;
+  place-items: center;
 }
 .portfolio-card img {
-  width: min(90%, 400px);
+  width: min(90%, 300px);
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+}
+.portfolio-card article .project-link {
+  font-size: 1.25rem;
+}
+.portfolio-card article span {
+  color: #646369;
+  margin: 0.25rem 0 0.5rem 0;
+}
+.portfolio-card article .github-link {
+  background-color: #103561;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1.15rem;
+}
+.portfolio-card article .github-link:hover {
+  background-color: #1f518c;
+}
+
+.contact {
+  width: min(100%, 1100px);
+}
+.contact .detail-group {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.contact-form {
+  width: min(100%, 840px);
+}
+.contact-form .flex-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  grid-template-rows: auto-fill;
+}
+.contact-form .input-container, .contact-form .flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.contact-form input, .contact-form textarea {
+  border: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+  padding: 0.25rem;
+  font-size: 1rem;
+}
+.contact-form .submit-btn {
+  background-color: #103561;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  width: -moz-max-content;
+  width: max-content;
+}
+.contact-form .submit-btn:hover {
+  background-color: #1f518c;
+}
+
+.top {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 @media (min-width: 600px) {

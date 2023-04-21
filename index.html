@@ -135,89 +135,95 @@
 
   <section class="portfolio p-1 flex-center" id="portfolio">
     <h3 class="my-2">Portfolio Projects</h3>
-    <div class="portfolio-card flex-center">
+    <div class="portfolio-card flex-center py-2">
       <header>
         <img src="img/dummy-preview.gif" alt="Preview">
       </header>
       <article class="flex-center">
-        <a href="#">Some Business Promo</a>
+        <a href="#" class="project-link">Some Business Promo <i class="fa-solid fa-up-right-from-square"></i></a>
         <span>Promotional HTML Email</span>
-        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        <a href="http://" target="_blank" rel="noopener noreferrer" class="github-link">View Code <i class="fa-brands fa-github"></i></a>
       </article>
     </div>
-    <div class="portfolio-card flex-center">
+    <div class="portfolio-card flex-center py-2">
       <header>
         <img src="img/dummy-preview.gif" alt="Preview">
       </header>
       <article class="flex-center">
-        <a href="#">Cool Fashion Promo</a>
+        <a href="#" class="project-link">Cool Fashion Promo <i class="fa-solid fa-up-right-from-square"></i></a>
         <span>Promotional HTML Email</span>
-        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        <a href="http://" target="_blank" rel="noopener noreferrer" class="github-link">View Code <i class="fa-brands fa-github"></i></a>
       </article>
     </div>
-    <div class="portfolio-card flex-center">
+    <div class="portfolio-card flex-center py-2">
       <header>
         <img src="img/dummy-preview.gif" alt="Preview">
       </header>
       <article class="flex-center">
-        <a href="#">Nifty New Newsletter</a>
+        <a href="#" class="project-link">Nifty New Newsletter <i class="fa-solid fa-up-right-from-square"></i></a>
         <span>HTML Email Newsletter</span>
-        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        <a href="http://" target="_blank" rel="noopener noreferrer" class="github-link">View Code <i class="fa-brands fa-github"></i></a>
       </article>
     </div>
-    <div class="portfolio-card flex-center">
+    <div class="portfolio-card flex-center py-2">
       <header>
         <img src="img/dummy-preview.gif" alt="Preview">
       </header>
       <article class="flex-center">
-        <a href="#">Apple Transactional Receipt</a>
+        <a href="#" class="project-link">Apple Transactional Receipt <i class="fa-solid fa-up-right-from-square"></i></a>
         <span>Transactional HTML Email</span>
-        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        <a href="http://" target="_blank" rel="noopener noreferrer" class="github-link">View Code <i class="fa-brands fa-github"></i></a>
       </article>
     </div>
-    <div class="portfolio-card flex-center">
+    <div class="portfolio-card flex-center py-2">
       <header>
         <img src="img/dummy-preview.gif" alt="Preview">
       </header>
       <article class="flex-center">
-        <a href="#">The Best Promo Ever</a>
+        <a href="#" class="project-link">The Best Promo Ever <i class="fa-solid fa-up-right-from-square"></i></a>
         <span>Promotional HTML Email</span>
-        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-      </article>
-    </div>
-    <div class="portfolio-card flex-center">
-      <header>
-        <img src="img/dummy-img.png" alt="Preview">
-      </header>
-      <article class="flex-center">
-        <a href="#">Ricky Bobby's Newsletter</a>
-        <span>HTML Email Newsletter</span>
-        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        <a href="http://" target="_blank" rel="noopener noreferrer" class="github-link">View Code <i class="fa-brands fa-github"></i></a>
       </article>
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <h3>Contact Me</h3>
-    <div class="section-block">
-      <h4>Details</h4>
-      <div class="detail-group">
-        <figure>
-          <img src="img/details_location.png" alt="Location icon" height="100">
-          <figcaption>Based in Gadsden, AL</figcaption>
-        </figure>
-        <figure>
-          <img src="img/details_freelance.png" alt="Graphic of person working at a computer" height="100">
-          <figcaption>Freelance Available</figcaption>
-        </figure>
-      </div>
+  <section class="contact p-1 flex-center" id="contact">
+    <h3 class="my-2">Contact Me</h3> 
+    <h4 class="text-highlight my-1 text-uppercase">Details</h4>
+    <div class="detail-group my-2">
+      <figure class="flex-center">
+        <img src="img/details_location.png" alt="Location icon" height="100">
+        <figcaption>Based in Gadsden, AL</figcaption>
+      </figure>
+      <figure class="flex-center">
+        <img src="img/details_freelance.png" alt="Graphic of person working at a computer" height="80">
+        <figcaption>Freelance Available</figcaption>
+      </figure>
     </div>
+    <h4 class="text-highlight my-2 text-uppercase">Send Me an Electronic Mail</h4>
+    <form class="contact-form p-1" action="https://formsubmit.co/wadecedwards@gmail.com" method="POST">
+      <div class="flex-wrap flex-container">
+        <div class="input-container my-1 p-1">
+          <label for="name">Name</label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="input-container my-1 p-1">
+          <label for="email">Email</label>
+          <input type="email" name="email" required>
+        </div>
+      </div>
+      <div class="flex-col flex-container my-2 p-1">
+        <label for="message">Message</label>
+        <textarea name="message" rows="7" required></textarea>
+        <button type="submit" class="submit-btn my-2" id="submit-btn">Send Message</button>
+      </div>
+    </form>
   </section>
 
   <button class="top">
     <a href="#home">
-      <img src="img/arrow.svg" alt="Arrow pointing upwards" height="100">
-      <span>To Top</span>
+      <img src="img/arrow.svg" alt="Arrow pointing upwards" height="70">
+      <!-- <span>To Top</span> -->
     </a>
   </button>
   

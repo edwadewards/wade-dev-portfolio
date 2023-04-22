@@ -91,7 +91,6 @@ body {
   place-items: center;
   font-family: "Roboto Mono", monospace;
   color: #333;
-  position: relative;
 }
 
 ul {
@@ -161,15 +160,15 @@ h1, h2 {
 
 .hero {
   height: 100vh;
-  width: min(100%, 1460px);
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  background-color: #103561;
   border: 12px solid #041c38;
 }
 .hero header {
-  background-color: #103561;
   color: #fff;
   height: 100%;
   width: 100%;
@@ -182,29 +181,45 @@ h1, h2 {
   padding-top: 1.35rem;
   border-top: 1px solid #fff;
 }
+.hero header nav ul {
+  display: flex;
+}
 .hero header nav > ul > li > a {
   margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 0.35rem;
+  font-size: 0.75rem;
 }
 .hero header nav > ul > li > a i {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .hero .portfolio-nav {
-  background: orange;
-  width: 80%;
+  width: -moz-max-content;
+  width: max-content;
+  color: #fff;
+  background-color: #1f518c;
   justify-self: flex-end;
   padding: 1rem;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  position: sticky;
   display: none;
 }
 .hero .portfolio-nav ul {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 3.75rem;
+}
+.hero .portfolio-nav ul span {
+  font-size: 0.75rem;
+}
+.hero .portfolio-nav ul i {
+  font-size: 1.5rem;
+  margin-bottom: 0.45rem;
+}
+
+nav a:hover, nav button:hover {
+  color: #fa9e93;
 }
 
 .about {
@@ -316,6 +331,7 @@ h1, h2 {
   border-bottom: 2px solid rgba(0, 0, 0, 0.15);
   padding: 0.25rem;
   font-size: 1rem;
+  outline: 0;
 }
 .contact-form .submit-btn {
   background-color: #103561;
@@ -329,18 +345,22 @@ h1, h2 {
   background-color: #1f518c;
 }
 
+input:focus, textarea:focus {
+  border-bottom-color: #333;
+}
+
 .top {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
+  padding: 0 0.45rem;
 }
 
 @media (min-width: 600px) {
-  .hero {
-    height: 90vh;
-    border-radius: 20px;
+  .hero .portfolio-nav {
+    display: flex;
   }
-  .hero header {
-    border-radius: 6px;
+  .top {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

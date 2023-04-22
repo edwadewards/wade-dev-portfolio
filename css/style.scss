@@ -13,7 +13,7 @@ body {
   place-items: center;
   font-family: $font-primary;
   color: $text-dark;
-  position: relative;
+  // position: relative;
 }
 
 ul {
@@ -83,16 +83,15 @@ h1, h2 {
 // home section styles
 .hero {
   height: 100vh;
-  width: min(100%, 1460px);
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
+  background-color: $clr-primary;
   border: 12px solid $clr-primary-dark;
 
   header {
-    background-color: $clr-primary;
     color: $text-light;
     height: 100%;
     width: 100%;
@@ -104,37 +103,54 @@ h1, h2 {
       margin-top: 1.35rem;
       padding-top: 1.35rem;
       border-top: 1px solid $text-light;
-
+  
+      ul {
+        display: flex;
+      }
+  
       >ul>li>a {
         margin: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: .35rem;
-
+        font-size: .75rem;
+  
         i {
-          font-size: 2rem;
+          font-size: 1.5rem;
         }
       }
     }
   }
 
   .portfolio-nav {
-    // background-color: $text-light;
-    background: orange;
-    width: 80%;
+    width: max-content;
+    color: $text-light;
+    background-color: $clr-primary-light;
     justify-self: flex-end;
     padding: 1rem;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    position: sticky;
     display: none;
 
     ul {
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: center;
+      gap: 3.75rem;
+
+      span {
+        font-size: .75rem;
+      }
+
+      i {
+        font-size: 1.5rem;
+        margin-bottom: .45rem;
+      }
     }
   }
+}
+
+nav a:hover, nav button:hover {
+  color: $clr-accent;
 }
 
 .about {
@@ -263,6 +279,7 @@ h1, h2 {
     border-bottom: 2px solid rgba(0, 0, 0, .15);
     padding: .25rem;
     font-size: 1rem;
+    outline: 0;
   }
 
   .submit-btn {
@@ -278,11 +295,15 @@ h1, h2 {
   }
 }
 
+input:focus, textarea:focus {
+  border-bottom-color: $text-dark;
+}
+
 .top {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
-  
+  padding: 0 .45rem;
 }
 
 

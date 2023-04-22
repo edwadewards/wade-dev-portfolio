@@ -78,6 +78,38 @@
   padding: 5rem 0;
 }
 
+.explore-mode {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+  height: 100vh;
+}
+.explore-mode .slide-container {
+  position: relative;
+}
+.explore-mode .slide-container .portfolio-slide {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-height: 100vh;
+  width: 100%;
+}
+.explore-mode .slide-container .portfolio-slide h3 {
+  display: none;
+}
+.explore-mode .slide-container .portfolio {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.explore-mode .slide-container .portfolio-card {
+  border-bottom: none;
+}
+
+#about, #contact {
+  display: none;
+}
+
 *,
 *::before,
 *::after {
@@ -91,6 +123,7 @@ body {
   place-items: center;
   font-family: "Roboto Mono", monospace;
   color: #333;
+  overflow-x: hidden;
 }
 
 ul {
@@ -227,6 +260,7 @@ nav a:hover, nav button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 .about .card {
   display: flex;
@@ -326,6 +360,9 @@ nav a:hover, nav button:hover {
   flex-direction: column;
   justify-content: flex-start;
 }
+.contact-form .flex-col {
+  margin-top: 2rem;
+}
 .contact-form input, .contact-form textarea {
   border: 0;
   border-bottom: 2px solid rgba(0, 0, 0, 0.15);
@@ -356,7 +393,7 @@ input:focus, textarea:focus {
   padding: 0 0.45rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1400px) {
   .hero .portfolio-nav {
     display: flex;
   }

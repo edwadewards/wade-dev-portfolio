@@ -1,0 +1,42 @@
+// Desktop only site styles - class added via JS
+.explore-mode {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+  height: 100vh;
+
+  .slide-container {
+    position: relative;
+
+    .portfolio-slide {
+      position: absolute;
+      top: 0;
+      right: 0;
+      max-height: 100vh;
+      width: 100%;
+    
+      h3 {
+        display: none;
+      }
+    }
+    
+    .portfolio {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  
+    
+      &-card {
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+#about, #contact {
+  display: none;
+}
+

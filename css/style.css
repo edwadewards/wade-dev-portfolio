@@ -84,29 +84,44 @@
   width: 100%;
   height: 100vh;
 }
-.explore-mode .slide-container {
-  position: relative;
-}
-.explore-mode .slide-container .portfolio-slide {
-  position: absolute;
-  top: 0;
-  right: 0;
-  max-height: 100vh;
-  width: 100%;
-}
-.explore-mode .slide-container .portfolio-slide h3 {
+.explore-mode h3 {
   display: none;
 }
-.explore-mode .slide-container .portfolio {
+.explore-mode .portfolio-project {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  place-items: center;
+  width: 100%;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
-.explore-mode .slide-container .portfolio-card {
-  border-bottom: none;
+.explore-mode .portfolio-project header {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 350ms ease;
 }
-
-#about, #contact {
+.explore-mode .portfolio-project header:hover {
+  background-color: #eee;
+}
+.explore-mode .portfolio-project .active {
+  border-bottom: 2px solid #333;
+}
+.explore-mode .portfolio-project figure {
+  position: absolute;
+  top: 8rem;
+  left: 35%;
+  right: 35%;
+  display: none;
+}
+.explore-mode .portfolio-project figure .btn-group {
+  margin-top: 3rem;
+  width: -moz-max-content;
+  width: max-content;
+}
+.explore-mode #about, .explore-mode #contact, .explore-mode #portfolio {
   display: none;
 }
 
@@ -123,7 +138,6 @@ body {
   place-items: center;
   font-family: "Roboto Mono", monospace;
   color: #333;
-  overflow-x: hidden;
 }
 
 ul {
@@ -303,37 +317,33 @@ nav a:hover, nav button:hover {
   gap: 3.75rem;
 }
 
-.portfolio {
-  width: min(100%, 1000px);
-}
-.portfolio-card {
-  width: 100%;
-  gap: 1.25rem;
-  border-bottom: 1px solid #333;
-}
-.portfolio-card header {
-  display: grid;
-  place-items: center;
-}
-.portfolio-card img {
+.portfolio img {
   width: min(90%, 300px);
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
 }
-.portfolio-card article .project-link {
-  font-size: 1.25rem;
+.portfolio header {
+  display: grid;
+  place-items: center;
 }
-.portfolio-card article span {
+.portfolio header h5 {
+  font-size: 0.9rem;
+}
+.portfolio header span {
   color: #646369;
   margin: 0.25rem 0 0.5rem 0;
+  font-size: 0.75rem;
 }
-.portfolio-card article .github-link {
+.portfolio figure {
+  display: none;
+}
+.portfolio figure .project-link {
   background-color: #103561;
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   font-size: 1.15rem;
 }
-.portfolio-card article .github-link:hover {
+.portfolio figure .project-link:hover {
   background-color: #1f518c;
 }
 

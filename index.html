@@ -22,7 +22,7 @@
     </div>
   </div> -->
 
-  <div class="full-container explore-mode">
+  <div class="full-container">
 
     <main class="hero">
       <header class="hero-dash flex-center" id="home">
@@ -139,16 +139,83 @@
         </article>
       </section>
     
-      <section class="portfolio p-1 flex-center portfolio-slide" id="portfolio">
+      <section class="portfolio flex-center portfolio-slide" id="portfolio">
         <h3 class="my-2">Portfolio Projects</h3>
-        <div class="portfolio-card flex-center py-2">
-          <header>
+        <div class="portfolio-project">
+          <header class="portfolio-btn active" onclick="showProject(event, '1')">
+            <h5>Some Business Promo</h5>
+            <span>Promotional HTML Email</span>
+          </header>
+          <figure class="project" id="1">
             <img src="img/dummy-preview.gif" alt="Preview">
+            <div class="btn-group">
+              <button>
+                <a href="http://" target="_blank" rel="noopener noreferrer" class="project-link my-1">View Demo <i class="fa-solid fa-up-right-from-square"></i></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer" class="project-link my-1">View Code <i class="fa-brands fa-github"></i></a>
+              </button>
+            </div>
+          </figure>
+          <header class="portfolio-btn" onclick="showProject(event, '2')">
+            <h5>Fancy Fashion Promo</h5>
+            <span>Promotional HTML Email</span>
+          </header>
+          <figure class="project" id="2">
+            <img src="img/dummy-preview.gif" alt="Preview">
+            <div class="btn-group">
+              <button>
+                <a href="http://" target="_blank" rel="noopener noreferrer" class="project-link">View Demo <i class="fa-solid fa-up-right-from-square"></i></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer" class="project-link">View Code <i class="fa-brands fa-github"></i></a>
+              </button>
+            </div>
+          </figure>
+          <header class="portfolio-btn" onclick="showProject(event, '3')">
+            <h5>Cheese Whiz Newsletter</h5>
+            <span>HTML Newsletter Email</span>
+          </header>
+          <figure class="project" id="3">
+            <img src="img/dummy-preview.gif" alt="Preview">
+            <div class="btn-group">
+              <button>
+                <a href="http://" target="_blank" rel="noopener noreferrer" class="project-link">View Demo <i class="fa-solid fa-up-right-from-square"></i></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer" class="project-link">View Code <i class="fa-brands fa-github"></i></a>
+              </button>
+            </div>
+          </figure>
+          <header class="portfolio-btn" onclick="showProject(event, '4')">
+            <h5>Apple Receipt</h5>
+            <span>Transactional HTML Email</span>
+          </header>
+          <figure class="project" id="4">
+            <img src="img/dummy-preview.gif" alt="Preview">
+            <div class="btn-group">
+              <button>
+                <a href="http://" target="_blank" rel="noopener noreferrer" class="project-link">View Demo <i class="fa-solid fa-up-right-from-square"></i></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer" class="project-link">View Code <i class="fa-brands fa-github"></i></a>
+              </button>
+            </div>
+          </figure>
+          <header class="portfolio-btn" onclick="showProject(event, '5')">
+            <h5>Daewoo TVs Promo</h5>
+            <span>Promotional HTML Email</span>
+          </header>
+          <figure class="project" id="5">
+            <img src="img/dummy-preview.gif" alt="Preview">
+            <div class="btn-group">
+              <button>
+                <a href="http://" target="_blank" rel="noopener noreferrer" class="project-link">View Demo <i class="fa-solid fa-up-right-from-square"></i></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer" class="project-link">View Code <i class="fa-brands fa-github"></i></a>
+              </button>
+            </div>
+          </figure>
+        </div>
+        <!-- <div class="portfolio-card flex-center py-2">
+          <header>
+            
           </header>
           <article class="flex-center">
-            <a href="#" class="project-link">Some Business Promo <i class="fa-solid fa-up-right-from-square"></i></a>
-            <span>Promotional HTML Email</span>
-            <a href="http://" target="_blank" rel="noopener noreferrer" class="github-link">View Code <i class="fa-brands fa-github"></i></a>
+            <a href="#" class="project-link">Some Business Promo </a>
+            
+            
           </article>
         </div>
         <div class="portfolio-card flex-center py-2">
@@ -190,7 +257,7 @@
             <span>Promotional HTML Email</span>
             <a href="http://" target="_blank" rel="noopener noreferrer" class="github-link">View Code <i class="fa-brands fa-github"></i></a>
           </article>
-        </div>
+        </div> -->
       </section>
     
       <section class="contact p-1 flex-center portfolio-slide" id="contact">
@@ -236,5 +303,6 @@
     </a>
   </button>
   
+  <script src="main.js"></script>
 </body>
 </html>

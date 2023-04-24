@@ -14,7 +14,7 @@ body {
   place-items: center;
   font-family: $font-primary;
   color: $text-dark;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   // position: relative;
 }
 
@@ -209,34 +209,32 @@ nav a:hover, nav button:hover {
 }
 
 .portfolio {
-  width: min(100%, 1000px);
-
-  &-card {
-    width: 100%;
-    gap: 1.25rem;
-    border-bottom: 1px solid #333;
-
-    header {
-      display: grid;
-      place-items: center;
-    }
+  // width: min(100%, 1000px);
 
     img {
       width: min(90%, 300px);
       box-shadow: 0 0 7px rgba(0, 0, 0, .15);
     }
 
-    article {
-      .project-link {
-        font-size: 1.25rem;
+    header {
+      display: grid;
+      place-items: center;
+
+      h5 {
+        font-size: .9rem;
       }
 
       span {
         color: $text-light-alt;
         margin: .25rem 0 .5rem 0;
+        font-size: .75rem;
       }
+    }
 
-      .github-link {
+    figure {
+      display: none;
+
+      .project-link {
         background-color: $clr-primary;
         color: $text-light;
         padding: .5rem 1rem;
@@ -248,7 +246,6 @@ nav a:hover, nav button:hover {
         }
       }
     }
-  }
 }
 
 .contact {

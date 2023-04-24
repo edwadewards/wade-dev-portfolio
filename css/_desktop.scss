@@ -5,38 +5,52 @@
   width: 100%;
   height: 100vh;
 
-  .slide-container {
-    position: relative;
-
-    .portfolio-slide {
-      position: absolute;
-      top: 0;
-      right: 0;
-      max-height: 100vh;
-      width: 100%;
-    
-      h3 {
-        display: none;
-      }
-    }
-    
-    .portfolio {
-      position: relative;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+  h3 {
+    display: none;
+  }
   
-    
-      &-card {
-        // position: absolute;
-        // top: 0;
-        // right: 0;
-        border-bottom: none;
+  .portfolio-project {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    place-items: center;
+    width: 100%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .2);
+
+    header {
+      width: 100%;
+      height: 100%;
+      padding: .5rem 0;
+      border-bottom: 2px solid transparent;
+      transition: all 350ms ease;
+    }
+
+    header:hover {
+      background-color: #eee;
+    }
+
+    .active {
+      border-bottom: 2px solid $text-dark;
+    }
+  
+    figure {
+      position: absolute;
+      top: 8rem;
+      left: 35%;
+      right: 35%;
+      display: none;
+
+      .btn-group {
+        margin-top: 3rem;
+        width: max-content;
       }
     }
   }
+  #about, #contact, #portfolio {
+    display: none;
+  }
 }
 
-#about, #contact {
-  display: none;
-}
+
 

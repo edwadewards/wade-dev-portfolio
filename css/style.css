@@ -79,13 +79,16 @@
 }
 
 .explore-mode {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
   width: 100%;
   height: 100vh;
 }
 .explore-mode h3 {
   display: none;
+}
+.explore-mode .hero {
+  width: 35%;
+  transition: width 500ms ease-in-out;
 }
 .explore-mode .portfolio-project {
   position: relative;
@@ -120,9 +123,6 @@
   margin-top: 3rem;
   width: -moz-max-content;
   width: max-content;
-}
-.explore-mode #about, .explore-mode #contact, .explore-mode #portfolio {
-  display: none;
 }
 
 *,
@@ -267,6 +267,10 @@ h1, h2 {
 
 nav a:hover, nav button:hover {
   color: #fa9e93;
+}
+
+.reveal > * {
+  color: #effa5f;
 }
 
 .about {

@@ -1,12 +1,17 @@
 // Desktop only site styles - class added via JS
 .explore-mode {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  // display: grid;
+  // grid-template-columns: 1fr 2fr;
+  display: flex;
   width: 100%;
   height: 100vh;
 
   h3 {
     display: none;
+  }
+  .hero {
+    width: 35%;
+    transition: width 500ms ease-in-out;
   }
   
   .portfolio-project {
@@ -47,10 +52,12 @@
       }
     }
   }
-  #about, #contact, #portfolio {
-    display: none;
-  }
+  // #about, #contact, #portfolio {
+  //   display: none;
+  // }
 }
+
+
 
 
 

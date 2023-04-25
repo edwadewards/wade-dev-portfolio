@@ -1,14 +1,24 @@
+const navBtn = document.querySelectorAll('.nav-btn');
+
 function openSection(evt, section) {
   const slides = document.getElementsByClassName('portfolio-slide');
   for(let x = 0; x < slides.length; x++) {
-    slides[x].style.display = none;
+    slides[x].style.display = 'none';
   }
 
-  const navBtn = document.querySelectorAll('.nav-btn');
   for (let x = 0; x < navBtn.length; x++) {
-    navBtn[i].className = navBtn[i].className.replace(" reveal", "");
+    navBtn[x].className = navBtn[x].className.replace(" reveal", "");
   }
+
+  document.getElementById(section).style.display = 'flex';
+  evt.currentTarget.className += ' reveal';
 }
+
+navBtn.forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelector('.full-container').classList.add('explore-mode');
+  });
+});
 
 function showProject(evt, project) {
   const projects = document.getElementsByClassName('project');

@@ -155,6 +155,10 @@ nav a:hover, nav button:hover {
   color: $clr-accent;
 }
 
+.reveal > * {
+  color: #effa5f;
+} 
+
 .about {
   display: flex;
   flex-direction: column;

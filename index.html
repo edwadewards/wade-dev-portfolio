@@ -27,24 +27,24 @@
     <main class="hero">
       <header class="hero-dash flex-center" id="home">
         <img src="img/pfp.png" alt="Photo of Wade Edwards" height="200" class="main-img">
-        <h1 class="text-uppercase">Wade Edwards</h1>
+        <h1 class="text-uppercase fade-in">Wade Edwards</h1>
         <h2 class="text-uppercase">HTML Email Developer</h2>
         <h2 class="text-uppercase">Frontend Developer</h2>
         <nav class="dash-nav flex-center">
           <ul>
-            <li>
+            <li class="fade-in">
               <a href="" class="flex-center">
                 <i class="fa-solid fa-address-card"></i>
                 <span class="text-uppercase">Resume</span>
               </a>
             </li>
-            <li>
+            <li class="fade-in">
               <a href="" class="flex-center">
                 <i class="fa-brands fa-github"></i>
                 <span class="text-uppercase">Github</span>
               </a>
             </li>
-            <li>
+            <li class="fade-in">
               <a href="" class="flex-center">
                 <i class="fa-brands fa-linkedin"></i>
                 <span class="text-uppercase">LinkedIn</span>
@@ -53,7 +53,7 @@
           </ul>
         </nav>
       </header>
-      <nav class="portfolio-nav">
+      <nav class="portfolio-nav fade-in">
         <ul>
           <li>
             <button class="nav-btn about-btn flex-center" onclick="openSection(event, 'about')">
@@ -83,8 +83,8 @@
         <article>
           <h3 class="my-2">about me</h3>
           <div class="card-block flex-center">
-            <h4 class="text-highlight my-1 text-uppercase">Services</h4>
-            <div class="card my-2">
+            <h4 class="text-highlight my-1 text-uppercase fade-in">Services</h4>
+            <div class="card my-2 fade-in slide-up">
               <img src="img/services_laptop.png" alt="Graphic of a laptop" height="80">
               <p>
                 <span class="card-heading text-uppercase">
@@ -93,7 +93,7 @@
                 Responsive CSS is my bread and butter. Weather creating emails from scratch or refactoring existing code - attention to detail is among my strongest attributes.
               </p>
             </div>
-            <div class="card my-2">
+            <div class="card my-2 fade-in slide-up">
               <img src="img/services_lightbulb.png" alt="Graphic of a lightbulb" height="80">
               <p>
                 <span class="card-heading text-uppercase">
@@ -104,9 +104,9 @@
             </div>
           </div>
           <div class="card-block flex-center my-2">
-            <h4 class="text-highlight my-1 text-uppercase">Skills</h4>
+            <h4 class="text-highlight my-1 text-uppercase fade-in">Skills</h4>
             <div class="card-skills">
-              <figure class="flex-center">
+              <figure class="flex-center fade-in">
                 <img src="img/html.svg" alt="html logo" height="60" class="my-2">
                 <figcaption class="text-uppercase">HTML</figcaption>
               </figure>
@@ -142,11 +142,11 @@
       <section class="portfolio flex-center portfolio-slide" id="portfolio">
         <h3 class="my-2">Portfolio Projects</h3>
         <div class="portfolio-project">
-          <header class="portfolio-btn active" onclick="showProject(event, '1')">
+          <header class="portfolio-btn fade-in active" onclick="showProject(event, '1')">
             <h5>Some Business Promo</h5>
             <span>Promotional HTML Email</span>
           </header>
-          <figure class="project" id="1">
+          <figure class="project fade-in" id="1">
             <img src="img/dummy-preview.gif" alt="Preview">
             <div class="btn-group">
               <button>
@@ -155,11 +155,11 @@
               </button>
             </div>
           </figure>
-          <header class="portfolio-btn" onclick="showProject(event, '2')">
+          <header class="portfolio-btn fade-in" onclick="showProject(event, '2')">
             <h5>Fancy Fashion Promo</h5>
             <span>Promotional HTML Email</span>
           </header>
-          <figure class="project" id="2">
+          <figure class="project fade-in" id="2">
             <img src="img/dummy-preview.gif" alt="Preview">
             <div class="btn-group">
               <button>
@@ -168,11 +168,11 @@
               </button>
             </div>
           </figure>
-          <header class="portfolio-btn" onclick="showProject(event, '3')">
+          <header class="portfolio-btn fade-in" onclick="showProject(event, '3')">
             <h5>Cheese Whiz Newsletter</h5>
             <span>HTML Newsletter Email</span>
           </header>
-          <figure class="project" id="3">
+          <figure class="project fade-in" id="3">
             <img src="img/dummy-preview.gif" alt="Preview">
             <div class="btn-group">
               <button>
@@ -181,11 +181,11 @@
               </button>
             </div>
           </figure>
-          <header class="portfolio-btn" onclick="showProject(event, '4')">
+          <header class="portfolio-btn fade-in" onclick="showProject(event, '4')">
             <h5>Apple Receipt</h5>
             <span>Transactional HTML Email</span>
           </header>
-          <figure class="project" id="4">
+          <figure class="project fade-in" id="4">
             <img src="img/dummy-preview.gif" alt="Preview">
             <div class="btn-group">
               <button>
@@ -194,11 +194,11 @@
               </button>
             </div>
           </figure>
-          <header class="portfolio-btn" onclick="showProject(event, '5')">
+          <header class="portfolio-btn fade-in" onclick="showProject(event, '5')">
             <h5>Daewoo TVs Promo</h5>
             <span>Promotional HTML Email</span>
           </header>
-          <figure class="project" id="5">
+          <figure class="project fade-in" id="5">
             <img src="img/dummy-preview.gif" alt="Preview">
             <div class="btn-group">
               <button>
@@ -208,62 +208,12 @@
             </div>
           </figure>
         </div>
-        <!-- <div class="portfolio-card flex-center py-2">
-          <header>
-            
-          </header>
-          <article class="flex-center">
-            <a href="#" class="project-link">Some Business Promo </a>
-            
-            
-          </article>
-        </div>
-        <div class="portfolio-card flex-center py-2">
-          <header>
-            <img src="img/dummy-preview.gif" alt="Preview">
-          </header>
-          <article class="flex-center">
-            <a href="#" class="project-link">Cool Fashion Promo <i class="fa-solid fa-up-right-from-square"></i></a>
-            <span>Promotional HTML Email</span>
-            <a href="http://" target="_blank" rel="noopener noreferrer" class="github-link">View Code <i class="fa-brands fa-github"></i></a>
-          </article>
-        </div>
-        <div class="portfolio-card flex-center py-2">
-          <header>
-            <img src="img/dummy-preview.gif" alt="Preview">
-          </header>
-          <article class="flex-center">
-            <a href="#" class="project-link">Nifty New Newsletter <i class="fa-solid fa-up-right-from-square"></i></a>
-            <span>HTML Email Newsletter</span>
-            <a href="http://" target="_blank" rel="noopener noreferrer" class="github-link">View Code <i class="fa-brands fa-github"></i></a>
-          </article>
-        </div>
-        <div class="portfolio-card flex-center py-2">
-          <header>
-            <img src="img/dummy-preview.gif" alt="Preview">
-          </header>
-          <article class="flex-center">
-            <a href="#" class="project-link">Apple Transactional Receipt <i class="fa-solid fa-up-right-from-square"></i></a>
-            <span>Transactional HTML Email</span>
-            <a href="http://" target="_blank" rel="noopener noreferrer" class="github-link">View Code <i class="fa-brands fa-github"></i></a>
-          </article>
-        </div>
-        <div class="portfolio-card flex-center py-2">
-          <header>
-            <img src="img/dummy-preview.gif" alt="Preview">
-          </header>
-          <article class="flex-center">
-            <a href="#" class="project-link">The Best Promo Ever <i class="fa-solid fa-up-right-from-square"></i></a>
-            <span>Promotional HTML Email</span>
-            <a href="http://" target="_blank" rel="noopener noreferrer" class="github-link">View Code <i class="fa-brands fa-github"></i></a>
-          </article>
-        </div> -->
       </section>
     
       <section class="contact p-1 flex-center portfolio-slide" id="contact">
         <h3 class="my-2">Contact Me</h3> 
-        <h4 class="text-highlight my-1 text-uppercase">Details</h4>
-        <div class="detail-group my-1">
+        <h4 class="text-highlight my-1 text-uppercase fade-in">Details</h4>
+        <div class="detail-group my-1 fade-in slide-up">
           <figure class="flex-center">
             <img src="img/details_location.png" alt="Location icon" height="100">
             <figcaption>Based in Gadsden, AL</figcaption>
@@ -273,7 +223,7 @@
             <figcaption>Freelance Available</figcaption>
           </figure>
         </div>
-        <h4 class="text-highlight my-2 text-uppercase">Send Me an Electronic Mail</h4>
+        <h4 class="text-highlight my-2 text-uppercase fade-in">Send Me an Electronic Mail</h4>
         <form class="contact-form p-1" action="https://formsubmit.co/wadecedwards@gmail.com" method="POST">
           <div class="flex-wrap flex-container">
             <div class="input-container my-1 p-1">

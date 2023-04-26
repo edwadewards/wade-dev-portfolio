@@ -78,51 +78,31 @@
   padding: 5rem 0;
 }
 
-.explore-mode {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-}
-.explore-mode h3 {
-  display: none;
-}
 .explore-mode .hero {
-  width: 35%;
-  transition: width 500ms ease-in-out;
+  width: 40%;
+  transition: width 500ms linear;
 }
-.explore-mode .portfolio-project {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  place-items: center;
-  width: 100%;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+.explore-mode .slide-container {
+  width: 60%;
+  transition: opacity 500ms 500ms linear;
 }
-.explore-mode .portfolio-project header {
-  width: 100%;
-  height: 100%;
-  padding: 0.5rem 0;
-  border-bottom: 2px solid transparent;
-  transition: all 350ms ease;
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 300ms 300ms ease;
 }
-.explore-mode .portfolio-project header:hover {
-  background-color: #eee;
+
+.fade-in.appear {
+  opacity: 1;
 }
-.explore-mode .portfolio-project .active {
-  border-bottom: 2px solid #333;
+
+.slide-up {
+  translate: 0 80px;
+  transition: translate 400ms ease;
 }
-.explore-mode .portfolio-project figure {
-  position: absolute;
-  top: 8rem;
-  left: 35%;
-  right: 35%;
-  display: none;
-}
-.explore-mode .portfolio-project figure .btn-group {
-  margin-top: 3rem;
-  width: -moz-max-content;
-  width: max-content;
+
+.slide-up.appear {
+  translate: 0 0;
 }
 
 *,
@@ -138,6 +118,8 @@ body {
   place-items: center;
   font-family: "Roboto Mono", monospace;
   color: #333;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -202,7 +184,8 @@ h1, h2 {
 .main-img {
   border-radius: 50%;
   width: 200px;
-  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .hero {
@@ -278,13 +261,11 @@ nav a:hover, nav button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 .about .card {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: min(100%, 1100px);
 }
 .about .card img {
   margin-right: 2rem;
@@ -351,9 +332,6 @@ nav a:hover, nav button:hover {
   background-color: #1f518c;
 }
 
-.contact {
-  width: min(100%, 1100px);
-}
 .contact .detail-group {
   display: flex;
   align-items: flex-end;
@@ -408,10 +386,60 @@ input:focus, textarea:focus {
 }
 
 @media (min-width: 1400px) {
+  .top {
+    display: none;
+  }
+  h3 {
+    display: none;
+  }
+  .full-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
   .hero .portfolio-nav {
     display: flex;
   }
-  .top {
+  .slide-container {
+    position: relative;
+    height: 100%;
+  }
+  .slide-container .portfolio-slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  .portfolio-project {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    place-items: center;
+    width: 100%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  }
+  .portfolio-project header {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: all 350ms ease;
+  }
+  .portfolio-project header:hover {
+    background-color: #eee;
+  }
+  .portfolio-project .active {
+    border-bottom: 2px solid #333;
+  }
+  .portfolio-project figure {
     display: none;
+  }
+  .portfolio-project figure .btn-group {
+    margin-top: 3rem;
+    width: -moz-max-content;
+    width: max-content;
   }
 }/*# sourceMappingURL=style.css.map */

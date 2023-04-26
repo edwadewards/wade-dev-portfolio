@@ -1,5 +1,6 @@
 @import 'config';
 @import 'desktop';
+@import 'animations';
 
 *, 
 *::before,
@@ -14,8 +15,8 @@ body {
   place-items: center;
   font-family: $font-primary;
   color: $text-dark;
-  // overflow-x: hidden;
-  // position: relative;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -79,7 +80,8 @@ h1, h2 {
 .main-img {
   border-radius: 50%;
   width: 200px;
-  overflow: hidden;
+  object-fit: cover;
+  // overflow: hidden;
 }
 
 // home section styles
@@ -157,20 +159,18 @@ nav a:hover, nav button:hover {
 
 .reveal > * {
   color: #effa5f;
-} 
+}
 
 .about {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 
   .card {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: min(100%, 1100px);
 
     img {
       margin-right: 2rem;
@@ -253,7 +253,6 @@ nav a:hover, nav button:hover {
 }
 
 .contact {
-  width: min(100%, 1100px);
 
   .detail-group {
     display: flex;

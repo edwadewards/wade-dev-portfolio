@@ -79,11 +79,11 @@
 }
 
 .explore-mode .hero {
-  width: 40%;
+  width: 35%;
   transition: width 500ms linear;
 }
 .explore-mode .slide-container {
-  width: 60%;
+  width: 65%;
   transition: opacity 500ms 500ms linear;
 }
 
@@ -302,34 +302,59 @@ nav a:hover, nav button:hover {
   gap: 3.75rem;
 }
 
-.portfolio img {
-  width: min(90%, 300px);
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
-}
-.portfolio header {
-  display: grid;
-  place-items: center;
-}
-.portfolio header h5 {
-  font-size: 0.9rem;
-}
-.portfolio header span {
-  color: #646369;
-  margin: 0.25rem 0 0.5rem 0;
-  font-size: 0.75rem;
-}
-.portfolio figure {
-  display: none;
-}
-.portfolio figure .project-link {
+.portfolio {
   background-color: #103561;
   color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-size: 1.15rem;
+  border-radius: 10px;
+  height: 100vh;
+  width: calc(100% - 1rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
 }
-.portfolio figure .project-link:hover {
+.portfolio .project-preview {
+  position: relative;
+  min-height: 70vh;
+  width: min(100%, 500px);
+}
+.portfolio .project-preview img {
+  position: absolute;
+  top: 1rem;
+  left: 12%;
+}
+.portfolio .project-dash {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 1.25rem;
+}
+.portfolio .project-dash .dash-nav {
+  position: relative;
+  width: 100%;
+  height: 2.5rem;
+  margin: 0 0.75rem;
+  padding: 0.25rem;
   background-color: #1f518c;
+  border-radius: 20px;
+}
+.portfolio .project-dash .dash-nav .nav-btn.active {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.portfolio .project-dash .dash-nav .nav-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  height: 100%;
+  width: 100%;
+  padding: 0.25rem 0.4rem;
+}
+.portfolio .project-dash .dash-nav .nav-btn a {
+  z-index: 10;
 }
 
 .contact .detail-group {
@@ -412,34 +437,5 @@ input:focus, textarea:focus {
     width: 100%;
     height: 100%;
     opacity: 0;
-  }
-  .portfolio-project {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-    place-items: center;
-    width: 100%;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-  }
-  .portfolio-project header {
-    width: 100%;
-    height: 100%;
-    padding: 0.5rem 0;
-    border-bottom: 2px solid transparent;
-    transition: all 350ms ease;
-  }
-  .portfolio-project header:hover {
-    background-color: #eee;
-  }
-  .portfolio-project .active {
-    border-bottom: 2px solid #333;
-  }
-  .portfolio-project figure {
-    display: none;
-  }
-  .portfolio-project figure .btn-group {
-    margin-top: 3rem;
-    width: -moz-max-content;
-    width: max-content;
   }
 }/*# sourceMappingURL=style.css.map */

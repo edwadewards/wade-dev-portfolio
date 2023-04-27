@@ -302,59 +302,28 @@ nav a:hover, nav button:hover {
   gap: 3.75rem;
 }
 
-.portfolio {
+.portfolio-projects {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.portfolio-projects .project-card h5 {
+  font-size: 1.15rem;
+}
+.portfolio-projects .project-card span {
+  color: #646369;
+}
+.portfolio-projects .project-card .btn-group {
   background-color: #103561;
   color: #fff;
-  border-radius: 10px;
-  height: 100vh;
-  width: calc(100% - 1rem);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0 auto;
-}
-.portfolio .project-preview {
-  position: relative;
-  min-height: 70vh;
-  width: min(100%, 500px);
-}
-.portfolio .project-preview img {
-  position: absolute;
-  top: 1rem;
-  left: 12%;
-}
-.portfolio .project-dash {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  font-size: 1.25rem;
-}
-.portfolio .project-dash .dash-nav {
-  position: relative;
-  width: 100%;
-  height: 2.5rem;
-  margin: 0 0.75rem;
-  padding: 0.25rem;
-  background-color: #1f518c;
-  border-radius: 20px;
-}
-.portfolio .project-dash .dash-nav .nav-btn.active {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.portfolio .project-dash .dash-nav .nav-btn {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  height: 100%;
-  width: 100%;
-  padding: 0.25rem 0.4rem;
-}
-.portfolio .project-dash .dash-nav .nav-btn a {
-  z-index: 10;
+  font-size: 1.2rem;
+  border-radius: 7px;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.25rem 0.75rem;
+  margin-top: 0.4rem;
 }
 
 .contact .detail-group {
@@ -437,5 +406,8 @@ input:focus, textarea:focus {
     width: 100%;
     height: 100%;
     opacity: 0;
+  }
+  .portfolio {
+    overflow-y: scroll;
   }
 }/*# sourceMappingURL=style.css.map */

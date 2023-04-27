@@ -21,21 +21,6 @@ navBtn.forEach(btn => {
   });
 });
 
-function showProject(evt, project) {
-  const projects = document.getElementsByClassName('project');
-  for (let i = 0; i < projects.length; i++) {
-  projects[i].style.display = 'none';
-  }
-
-  const tabBtn = document.querySelectorAll('.portfolio-btn');
-  for (let i = 0; i < tabBtn.length; i++) {
-    tabBtn[i].className = tabBtn[i].className.replace(" active", "");
-  }
-
-  document.getElementById(project).style.display = 'block';
-  evt.currentTarget.className += ' active';
-}
-
 
 const fadeIn = document.querySelectorAll('.fade-in');
 

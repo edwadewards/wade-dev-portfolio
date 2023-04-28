@@ -64,13 +64,13 @@ document.querySelector('.btn-right').addEventListener('click', () => {
 document.querySelector('.btn-left').addEventListener('click', () => {
   clearInterval(interval);
 
-  if(indexValue < projectImg[0]) {
-    indexValue = projectImg.length;
+  if(indexValue < 0) {
+    indexValue = (projectImg.length);
     projectImg[indexValue++].style.opacity = '1';
   }
 
-  if(indexValue < projectLinks[0]) {
-    indexValue = projectLinks.length;
+  if(indexValue < 0) {
+    indexValue = (projectLinks.length);
     projectLinks[indexValue++].style.display = 'flex';
   }
 

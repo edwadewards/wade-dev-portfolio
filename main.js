@@ -1,5 +1,3 @@
-const navBtn = document.querySelectorAll('.nav-btn');
-
 function openSection(evt, section) {
   const slides = document.getElementsByClassName('portfolio-slide');
   for(let x = 0; x < slides.length; x++) {
@@ -14,6 +12,73 @@ function openSection(evt, section) {
   document.getElementById(section).style.zIndex = '10';
   evt.currentTarget.className += ' reveal';
 }
+
+const navBtn = document.querySelectorAll('.nav-btn');
+const projectImg = document.getElementsByClassName('project-img');
+const projectLinks = document.querySelectorAll('.project-links');
+
+function displayProject(evt, identifier) {
+  for (let i = 0; i < projectImg.length; i++) {
+  projectImg[i].style.opacity = '0';
+  }
+
+  const projectBtn = document.querySelectorAll('.project-btn');
+  for (let i = 0; i < projectBtn.length; i++) {
+    projectBtn[i].className = projectBtn[i].className.replace(" active", "");
+  }
+
+  document.getElementById(identifier).style.opacity = '1';
+  evt.currentTarget.className += ' active';
+}
+
+let indexValue = 0;
+function slideShow() {
+  for(let x = 0; x < projectImg.length; x++) {
+    projectImg[x].style.opacity = '0';
+  }
+
+  for(let i = 0; i < projectLinks.length; i++) {
+    projectLinks[i].style.display = 'none';
+  }
+
+  indexValue++;
+  if(indexValue > projectImg.length) {
+    indexValue = 1;
+  }
+
+  if(indexValue > projectLinks.length) {
+    indexValue = 1;
+  }
+
+  projectImg[indexValue - 1].style.opacity = '1';
+  projectLinks[indexValue - 1].style.display = 'flex';
+}
+let interval = setInterval(slideShow, 5000);
+slideShow();
+
+document.querySelector('.btn-right').addEventListener('click', () => {
+  clearInterval(interval);
+  slideShow(interval);
+});
+
+document.querySelector('.btn-left').addEventListener('click', () => {
+  clearInterval(interval);
+
+  if(indexValue < projectImg[0]) {
+    indexValue = projectImg.length;
+    projectImg[indexValue++].style.opacity = '1';
+  }
+
+  if(indexValue < projectLinks[0]) {
+    indexValue = projectLinks.length;
+    projectLinks[indexValue++].style.display = 'flex';
+  }
+
+  projectImg[indexValue--].style.opacity = '1';
+  projectLinks[indexValue--].style.display = 'flex';
+  slideShow();
+});
+
 
 navBtn.forEach(btn => {
   btn.addEventListener('click', () => {

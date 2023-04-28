@@ -36,6 +36,17 @@
   }
 
   .portfolio {
-    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .dash-btn {
+      display: none;
+    }
+
+    .project-dash {
+      display: flex;
+      flex-direction: row;
+    }
   }
 }

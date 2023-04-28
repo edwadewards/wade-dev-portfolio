@@ -302,30 +302,101 @@ nav a:hover, nav button:hover {
   gap: 3.75rem;
 }
 
-.portfolio-projects {
+.portfolio {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
 }
-.portfolio-projects .project-card h5 {
-  font-size: 1.15rem;
+.portfolio .project-display {
+  position: relative;
+  min-height: 70vh;
+  width: min(100%, 500px);
 }
-.portfolio-projects .project-card span {
-  color: #646369;
+.portfolio .project-display img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
-.portfolio-projects .project-card .btn-group {
-  background-color: #103561;
-  color: #fff;
-  font-size: 1.2rem;
-  border-radius: 7px;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0.25rem 0.75rem;
-  margin-top: 0.4rem;
+.portfolio .project-dash {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: min(100%, 500px);
+}
+.portfolio .project-dash nav {
+  background-color: #efefef;
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+}
+.portfolio .project-dash nav .project-links {
+  display: flex;
+  gap: 0.75rem;
+  border-radius: 22px;
+}
+.portfolio .project-dash nav .project-links .btn-group {
+  margin-left: auto;
 }
 
+.progress {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+}
+.progress .overlay {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.progress .left, .progress .right {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 3px solid #fa9e93;
+  border-radius: 100px 0px 0px 100px;
+  border-right: 0;
+  transform-origin: right;
+}
+
+.progress .left {
+  animation: spinner 2.5s linear forwards;
+}
+
+.progress .right {
+  animation: spinner2 2.5s linear forwards 2.5s;
+}
+
+@keyframes spinner2 {
+  0% {
+    z-index: 100;
+    transform: rotate(180deg);
+  }
+  100% {
+    z-index: 100;
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
 .contact .detail-group {
   display: flex;
   align-items: flex-end;

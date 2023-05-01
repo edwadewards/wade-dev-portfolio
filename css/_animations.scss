@@ -1,6 +1,6 @@
 .fade-in {
   opacity: 0;
-  transition: opacity 300ms 300ms ease;
+  transition: opacity 200ms 300ms ease;
 }
 
 .fade-in.appear {
@@ -9,7 +9,7 @@
 
 .slide-up {
   translate: 0 80px;
-  transition: translate 400ms ease;
+  transition: translate 300ms ease;
 }
 
 .slide-up.appear {

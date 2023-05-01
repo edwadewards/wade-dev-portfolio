@@ -89,7 +89,7 @@
 
 .fade-in {
   opacity: 0;
-  transition: opacity 300ms 300ms ease;
+  transition: opacity 200ms 300ms ease;
 }
 
 .fade-in.appear {
@@ -98,7 +98,7 @@
 
 .slide-up {
   translate: 0 80px;
-  transition: translate 400ms ease;
+  transition: translate 300ms ease;
 }
 
 .slide-up.appear {
@@ -344,6 +344,12 @@ h1, h2 {
 .portfolio .project-dash .project-nav .project-links .btn-group {
   margin-left: auto;
   margin-right: 1.25rem;
+}
+
+.btn-group .btn-left:disabled {
+  color: #646369;
+  pointer-events: none;
+  cursor: initial;
 }
 
 .progress {

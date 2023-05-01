@@ -265,6 +265,12 @@ h1, h2 {
   }
 }
 
+.btn-group .btn-left:disabled {
+  color: $text-light-alt;
+  pointer-events: none;
+  cursor: initial;
+}
+
 .progress {
   width: 20px;
   height: 20px;

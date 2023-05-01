@@ -14,8 +14,10 @@ function openSection(evt, section) {
 }
 
 const navBtn = document.querySelectorAll('.nav-btn');
-const projectImg = document.getElementsByClassName('project-img');
+const projectImg = document.querySelectorAll('.project-img');
 const projectLinks = document.querySelectorAll('.project-links');
+let leftBtn = document.querySelector('.btn-left');
+const rightBtn = document.querySelector('.btn-right');
 
 function displayProject(evt, identifier) {
   for (let i = 0; i < projectImg.length; i++) {
@@ -56,27 +58,25 @@ function slideShow() {
 let interval = setInterval(slideShow, 5000);
 slideShow();
 
-document.querySelector('.btn-right').addEventListener('click', () => {
+rightBtn.addEventListener('click', () => {
   clearInterval(interval);
   slideShow(interval);
 });
 
-document.querySelector('.btn-left').addEventListener('click', () => {
+// function slideBack() {
+  
+// }
+
+leftBtn.addEventListener('click', () => {
   clearInterval(interval);
-
-  if(indexValue < 0) {
-    indexValue = (projectImg.length);
-    projectImg[indexValue++].style.opacity = '1';
-  }
-
-  if(indexValue < 0) {
-    indexValue = (projectLinks.length);
-    projectLinks[indexValue++].style.display = 'flex';
-  }
+  if(indexValue === projectLinks.item(1)) {
+    leftBtn.disabled = true;
+  } 
 
   projectImg[indexValue--].style.opacity = '1';
   projectLinks[indexValue--].style.display = 'flex';
   slideShow();
+  // slideBack();
 });
 
 

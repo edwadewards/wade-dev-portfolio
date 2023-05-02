@@ -306,7 +306,7 @@ a:hover, .hero nav button:hover {
   background-color: #103561;
   width: min(100%, 600px);
   gap: 0.5rem;
-  border-radius: 16px;
+  border-radius: 10px;
 }
 .portfolio .project-container .project-display {
   position: relative;
@@ -323,14 +323,15 @@ a:hover, .hero nav button:hover {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 10px;
+  border-radius: 3px;
+  border: 1px solid #041c38;
 }
 .portfolio .project-container .project-nav {
   background-color: #1f518c;
   width: 100%;
   gap: 0.6rem;
   padding: 0.6rem 0.25rem;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 .portfolio .project-container .project-nav .project-links {
   display: flex;

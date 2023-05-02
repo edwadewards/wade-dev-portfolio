@@ -218,7 +218,7 @@ a:hover, .hero nav button:hover {
     background-color: $clr-primary;
     width: min(100%, 600px);
     gap: .5rem;
-    border-radius: 16px;
+    border-radius: 10px;
 
     .project-display {
       position: relative;
@@ -234,7 +234,8 @@ a:hover, .hero nav button:hover {
         height: 100%;
         width: 100%;
         object-fit: cover;
-        border-radius: 10px;
+        border-radius: 3px;
+        border: 1px solid $clr-primary-dark;
       }
     }
 
@@ -243,7 +244,7 @@ a:hover, .hero nav button:hover {
       width: 100%;
       gap: .6rem;
       padding: .6rem .25rem;
-      border-radius: 10px;
+      border-radius: 3px;
 
       .project-links {
         display: flex;

@@ -21,7 +21,11 @@ const progress = document.querySelectorAll('.progress');
 // Portfolio - manually control slideshow
 function displayProject(evt, identifier) {
   for (let i = 0; i < projectImg.length; i++) {
-  projectImg[i].style.display = 'none';
+    projectImg[i].style.display = 'none';
+  }
+
+  for (let j = 0; j < progress.length; j++) {
+    progress[j].style.display = 'none';
   }
 
   const projectBtn = document.querySelectorAll('.project-btn');
@@ -31,6 +35,7 @@ function displayProject(evt, identifier) {
 
   document.getElementById(identifier).style.display = 'inline-block';
   evt.currentTarget.className += ' active';
+  clearInterval(interval);
 }
 
 // Portfolio - autoplay slideshow

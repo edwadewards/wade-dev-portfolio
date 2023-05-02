@@ -302,32 +302,38 @@ h1, h2 {
   gap: 3.75rem;
 }
 
-.portfolio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.portfolio .project-display {
-  position: relative;
-  min-height: 70vh;
+.portfolio .project-container {
+  background-color: #103561;
+  padding: 1rem;
   width: min(100%, 500px);
 }
-.portfolio .project-display img {
+.portfolio .project-display {
+  min-height: 60vh;
+  width: 100%;
+}
+.portfolio .project-display div {
+  position: relative;
+}
+.portfolio .project-display div img {
   position: absolute;
   top: 0;
   left: 0;
   max-width: 100%;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 .portfolio .project-dash {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
-  width: min(100%, 500px);
+  gap: 0.2rem;
+  width: 100%;
+  height: 0.75rem;
 }
-.portfolio .project-dash .project-nav {
+.portfolio .project-dash .pagination {
+  flex: 1 1 20%;
+  background-color: #1f518c;
+  height: 100%;
+}
+.portfolio .project-nav {
   background-color: #efefef;
   width: 100%;
   height: 2rem;
@@ -335,21 +341,11 @@ h1, h2 {
   border-radius: 22px;
   position: relative;
 }
-.portfolio .project-dash .project-nav .project-links {
+.portfolio .project-nav .project-links {
   display: flex;
   gap: 0.75rem;
   position: absolute;
   width: 100%;
-}
-.portfolio .project-dash .project-nav .project-links .btn-group {
-  margin-left: auto;
-  margin-right: 1.25rem;
-}
-
-.btn-group .btn-left:disabled {
-  color: #646369;
-  pointer-events: none;
-  cursor: initial;
 }
 
 .progress {

@@ -60,23 +60,22 @@ slideShow();
 
 rightBtn.addEventListener('click', () => {
   clearInterval(interval);
-  slideShow(interval);
+  slideShow();
 });
 
-// function slideBack() {
-  
-// }
-
-leftBtn.addEventListener('click', () => {
-  clearInterval(interval);
-  if(indexValue === projectLinks.item(1)) {
-    leftBtn.disabled = true;
+function slideBack() {
+  if(indexValue === projectLinks[0]) {
+    console.log('boogers');
   } 
 
   projectImg[indexValue--].style.opacity = '1';
   projectLinks[indexValue--].style.display = 'flex';
+}
+
+leftBtn.addEventListener('click', () => {
+  clearInterval(interval);
+  slideBack();
   slideShow();
-  // slideBack();
 });
 
 

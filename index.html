@@ -139,19 +139,25 @@
         </article>
       </section>
 
-      <section class="portfolio portfolio-slide p-1" id="portfolio">
+      <section class="portfolio portfolio-slide p-1 flex-center" id="portfolio">
         <h3 class="my-2">Portfolio Projects</h3>
-        <div class="project-display">
-          <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in">
-          <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in">
-          <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in">
-          <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in">
-          <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in">
-        </div>
-        <div class="project-dash">
-          <button class="btn-left dash-btn">
-            <i class="fa-solid fa-arrow-left"></i>
-          </button>
+        <div class="project-container flex-center">
+          <div class="project-display">
+            <div>
+              <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in">
+              <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in">
+              <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in">
+              <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in">
+              <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in">
+            </div>
+          </div>
+          <div class="project-dash">
+            <div class="pagination"></div>
+            <div class="pagination"></div>
+            <div class="pagination"></div>
+            <div class="pagination"></div>
+            <div class="pagination"></div>
+          </div>  
           <nav class="project-nav">
             <div class="project-links fade-in slide-up">
               <div class="progress">
@@ -234,10 +240,8 @@
               </div>
             </div>
           </nav>
-          <button class="btn-right dash-btn">
-            <i class="fa-solid fa-arrow-right"></i>
-          </button>
         </div>
+        
       </section>
     
       <section class="contact p-1 flex-center portfolio-slide" id="contact">

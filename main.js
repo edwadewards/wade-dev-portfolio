@@ -1,3 +1,4 @@
+// Full screen page section navigation
 function openSection(evt, section) {
   const slides = document.getElementsByClassName('portfolio-slide');
   for(let x = 0; x < slides.length; x++) {
@@ -15,13 +16,12 @@ function openSection(evt, section) {
 
 const navBtn = document.querySelectorAll('.nav-btn');
 const projectImg = document.querySelectorAll('.project-img');
-const projectLinks = document.querySelectorAll('.project-links');
-let leftBtn = document.querySelector('.btn-left');
-const rightBtn = document.querySelector('.btn-right');
+const progress = document.querySelectorAll('.progress');
 
+// Portfolio - manually control slideshow
 function displayProject(evt, identifier) {
   for (let i = 0; i < projectImg.length; i++) {
-  projectImg[i].style.opacity = '0';
+  projectImg[i].style.display = 'none';
   }
 
   const projectBtn = document.querySelectorAll('.project-btn');
@@ -29,18 +29,19 @@ function displayProject(evt, identifier) {
     projectBtn[i].className = projectBtn[i].className.replace(" active", "");
   }
 
-  document.getElementById(identifier).style.opacity = '1';
+  document.getElementById(identifier).style.display = 'inline-block';
   evt.currentTarget.className += ' active';
 }
 
+// Portfolio - autoplay slideshow
 let indexValue = 0;
 function slideShow() {
   for(let x = 0; x < projectImg.length; x++) {
-    projectImg[x].style.opacity = '0';
+    projectImg[x].style.display = 'none';
   }
 
-  for(let i = 0; i < projectLinks.length; i++) {
-    projectLinks[i].style.display = 'none';
+  for(let i = 0; i < progress.length; i++) {
+    progress[i].style.display = 'none';
   }
 
   indexValue++;
@@ -48,35 +49,15 @@ function slideShow() {
     indexValue = 1;
   }
 
-  if(indexValue > projectLinks.length) {
+  if(indexValue > progress.length) {
     indexValue = 1;
   }
 
-  projectImg[indexValue - 1].style.opacity = '1';
-  projectLinks[indexValue - 1].style.display = 'flex';
+  projectImg[indexValue - 1].style.display = 'inline-block';
+  progress[indexValue - 1].style.display = 'inline-block';
 }
 let interval = setInterval(slideShow, 5000);
 slideShow();
-
-rightBtn.addEventListener('click', () => {
-  clearInterval(interval);
-  slideShow();
-});
-
-function slideBack() {
-  if(indexValue === projectLinks[0]) {
-    console.log('boogers');
-  } 
-
-  projectImg[indexValue--].style.opacity = '1';
-  projectLinks[indexValue--].style.display = 'flex';
-}
-
-leftBtn.addEventListener('click', () => {
-  clearInterval(interval);
-  slideBack();
-  slideShow();
-});
 
 
 navBtn.forEach(btn => {
@@ -86,6 +67,7 @@ navBtn.forEach(btn => {
 });
 
 
+// Intersection Observers
 const fadeIn = document.querySelectorAll('.fade-in');
 
 const observerOptions = {
@@ -114,5 +96,6 @@ fadeIn.forEach(element => {
 });
 
 
+// Window height reset
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);

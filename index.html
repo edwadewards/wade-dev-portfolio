@@ -24,7 +24,7 @@
 
   <div class="full-container">
 
-    <main class="hero">
+    <main class="hero fade-in">
       <header class="hero-dash flex-center" id="home">
         <img src="img/pfp.png" alt="Photo of Wade Edwards" height="200" class="main-img">
         <h1 class="text-uppercase fade-in">Wade Edwards</h1>
@@ -33,19 +33,19 @@
         <nav class="dash-nav flex-center">
           <ul>
             <li class="fade-in">
-              <a href="" class="flex-center">
+              <a href="resume.pdf" target="_blank" class="flex-center">
                 <i class="fa-solid fa-address-card"></i>
                 <span class="text-uppercase">Resume</span>
               </a>
             </li>
             <li class="fade-in">
-              <a href="" class="flex-center">
+              <a href="https://github.com/edwadewards" target="_blank" class="flex-center">
                 <i class="fa-brands fa-github"></i>
                 <span class="text-uppercase">Github</span>
               </a>
             </li>
             <li class="fade-in">
-              <a href="" class="flex-center">
+              <a href="https://www.linkedin.com/in/wadecedwards/" target="_blank" class="flex-center">
                 <i class="fa-brands fa-linkedin"></i>
                 <span class="text-uppercase">LinkedIn</span>
               </a>
@@ -141,31 +141,22 @@
 
       <section class="portfolio portfolio-slide p-1 flex-center" id="portfolio">
         <h3 class="my-2">Portfolio Projects</h3>
-        <div class="project-container flex-center">
+        <div class="project-container flex-center p-1">
           <div class="project-display">
-            <div>
-              <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in">
-              <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in">
-              <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in">
-              <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in">
-              <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in">
-            </div>
-          </div>
-          <div class="project-dash">
-            <div class="pagination"></div>
-            <div class="pagination"></div>
-            <div class="pagination"></div>
-            <div class="pagination"></div>
-            <div class="pagination"></div>
-          </div>  
-          <nav class="project-nav">
+            <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in" id="project-one">
+            <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in" id="project-two">
+            <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in" id="project-three">
+            <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in" id="project-four">
+            <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in" id="project-five">
+          </div> 
+          <nav class="project-nav flex-center">
             <div class="project-links fade-in slide-up">
-              <div class="progress">
+              <div class="progress fade-in" id="project-one">
                 <div class="overlay"></div>
                 <div class="left"></div>
                 <div class="right"></div>
               </div>
-              <button class="project-btn">Some Awesome Promo</button>
+              <button class="project-btn" onclick="displayProject(event, 'project-one')">Some Awesome Promo</button>
               <div class="btn-group">
                 <a href="http://" target="_blank" rel="noopener noreferrer">
                   <i class="fa-solid fa-up-right-from-square"></i>
@@ -176,12 +167,12 @@
               </div>
             </div>
             <div class="project-links fade-in slide-up">
-              <div class="progress">
+              <div class="progress fade-in" id="project-two">
                 <div class="overlay"></div>
                 <div class="left"></div>
                 <div class="right"></div>
               </div>
-              <button class="project-btn">Brand New Promo</button>
+              <button class="project-btn" onclick="displayProject(event, 'project-two')">Brand New Promo</button>
               <div class="btn-group">
                 <a href="http://" target="_blank" rel="noopener noreferrer">
                   <i class="fa-solid fa-up-right-from-square"></i>
@@ -192,12 +183,12 @@
               </div>
             </div>
             <div class="project-links fade-in slide-up">
-              <div class="progress">
+              <div class="progress fade-in" id="project-three">
                 <div class="overlay"></div>
                 <div class="left"></div>
                 <div class="right"></div>
               </div>
-              <button class="project-btn">Nifty Newsletter</button>
+              <button class="project-btn" onclick="displayProject(event, 'project-three')">Nifty Newsletter</button>
               <div class="btn-group">
                 <a href="http://" target="_blank" rel="noopener noreferrer">
                   <i class="fa-solid fa-up-right-from-square"></i>
@@ -208,12 +199,12 @@
               </div>
             </div>
             <div class="project-links fade-in slide-up">
-              <div class="progress">
+              <div class="progress fade-in" id="project-four">
                 <div class="overlay"></div>
                 <div class="left"></div>
                 <div class="right"></div>
               </div>
-              <button class="project-btn">Apple Transaction Receipt</button>
+              <button class="project-btn" onclick="displayProject(event, 'project-four')">Apple Transaction Receipt</button>
               <div class="btn-group">
                 <a href="http://" target="_blank" rel="noopener noreferrer">
                   <i class="fa-solid fa-up-right-from-square"></i>
@@ -224,12 +215,12 @@
               </div>
             </div>
             <div class="project-links fade-in slide-up">
-              <div class="progress">
+              <div class="progress fade-in" id="project-five">
                 <div class="overlay"></div>
                 <div class="left"></div>
                 <div class="right"></div>
               </div>
-              <button class="project-btn">Daewoo TVs Promo</button>
+              <button class="project-btn" onclick="displayProject(event, 'project-five')">Daewoo TVs Promo</button>
               <div class="btn-group">
                 <a href="http://" target="_blank" rel="noopener noreferrer">
                   <i class="fa-solid fa-up-right-from-square"></i>

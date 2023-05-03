@@ -150,13 +150,13 @@
             <img src="img/dummy-preview-5.gif" alt="Preview of.." class="project-img fade-in" id="project-five">
           </div> 
           <nav class="project-nav flex-center">
-            <div class="project-links fade-in slide-up">
-              <div class="progress fade-in" id="project-one">
+            <div class="project-links fade-in slide-up" onclick="displayProject(event, 'project-one')">
+              <div class="progress fade-in">
                 <div class="overlay"></div>
                 <div class="left"></div>
                 <div class="right"></div>
               </div>
-              <button class="project-btn" onclick="displayProject(event, 'project-one')">Some Awesome Promo</button>
+              <button class="project-btn">Some Awesome Promo</button>
               <div class="btn-group">
                 <a href="http://" target="_blank" rel="noopener noreferrer">
                   <i class="fa-solid fa-up-right-from-square"></i>
@@ -166,13 +166,13 @@
                 </a>
               </div>
             </div>
-            <div class="project-links fade-in slide-up">
-              <div class="progress fade-in" id="project-two">
+            <div class="project-links fade-in slide-up" onclick="displayProject(event, 'project-two')">
+              <div class="progress fade-in">
                 <div class="overlay"></div>
                 <div class="left"></div>
                 <div class="right"></div>
               </div>
-              <button class="project-btn" onclick="displayProject(event, 'project-two')">Brand New Promo</button>
+              <button class="project-btn">Brand New Promo</button>
               <div class="btn-group">
                 <a href="http://" target="_blank" rel="noopener noreferrer">
                   <i class="fa-solid fa-up-right-from-square"></i>
@@ -182,13 +182,13 @@
                 </a>
               </div>
             </div>
-            <div class="project-links fade-in slide-up">
-              <div class="progress fade-in" id="project-three">
+            <div class="project-links fade-in slide-up" onclick="displayProject(event, 'project-three')">
+              <div class="progress fade-in">
                 <div class="overlay"></div>
                 <div class="left"></div>
                 <div class="right"></div>
               </div>
-              <button class="project-btn" onclick="displayProject(event, 'project-three')">Nifty Newsletter</button>
+              <button class="project-btn">Nifty Newsletter</button>
               <div class="btn-group">
                 <a href="http://" target="_blank" rel="noopener noreferrer">
                   <i class="fa-solid fa-up-right-from-square"></i>
@@ -198,13 +198,13 @@
                 </a>
               </div>
             </div>
-            <div class="project-links fade-in slide-up">
-              <div class="progress fade-in" id="project-four">
+            <div class="project-links fade-in slide-up" onclick="displayProject(event, 'project-four')">
+              <div class="progress fade-in">
                 <div class="overlay"></div>
                 <div class="left"></div>
                 <div class="right"></div>
               </div>
-              <button class="project-btn" onclick="displayProject(event, 'project-four')">Apple Transaction Receipt</button>
+              <button class="project-btn">Apple Transaction Receipt</button>
               <div class="btn-group">
                 <a href="http://" target="_blank" rel="noopener noreferrer">
                   <i class="fa-solid fa-up-right-from-square"></i>
@@ -214,13 +214,13 @@
                 </a>
               </div>
             </div>
-            <div class="project-links fade-in slide-up">
-              <div class="progress fade-in" id="project-five">
+            <div class="project-links fade-in slide-up" onclick="displayProject(event, 'project-five')">
+              <div class="progress fade-in">
                 <div class="overlay"></div>
                 <div class="left"></div>
                 <div class="right"></div>
               </div>
-              <button class="project-btn" onclick="displayProject(event, 'project-five')">Daewoo TVs Promo</button>
+              <button class="project-btn">Daewoo TVs Promo</button>
               <div class="btn-group">
                 <a href="http://" target="_blank" rel="noopener noreferrer">
                   <i class="fa-solid fa-up-right-from-square"></i>
@@ -237,18 +237,18 @@
     
       <section class="contact p-1 flex-center portfolio-slide" id="contact">
         <h3 class="my-2">Contact Me</h3> 
-        <h4 class="text-highlight my-1 text-uppercase fade-in">Details</h4>
+        <h4 class="text-highlight text-uppercase fade-in">Details</h4>
         <div class="detail-group my-1 fade-in slide-up">
           <figure class="flex-center">
             <img src="img/details_location.png" alt="Location icon" height="100">
-            <figcaption>Based in Gadsden, AL</figcaption>
+            <figcaption class="my-1">Based in Gadsden, AL</figcaption>
           </figure>
           <figure class="flex-center">
             <img src="img/details_freelance.png" alt="Graphic of person working at a computer" height="80">
-            <figcaption>Freelance Available</figcaption>
+            <figcaption class="my-1">Freelance Available</figcaption>
           </figure>
         </div>
-        <h4 class="text-highlight my-2 text-uppercase fade-in">Send Me an Electronic Mail</h4>
+        <h4 class="text-highlight text-uppercase fade-in">Send Me an Electronic Mail</h4>
         <form class="contact-form p-1" action="https://formsubmit.co/wadecedwards@gmail.com" method="POST">
           <div class="flex-wrap flex-container">
             <div class="input-container my-1 p-1">
@@ -263,7 +263,7 @@
           <div class="flex-col flex-container p-1">
             <label for="message">Message</label>
             <textarea name="message" rows="7" required></textarea>
-            <button type="submit" class="submit-btn my-2" id="submit-btn">Send Message</button>
+            <button type="submit" class="submit-btn" id="submit-btn">Send Message</button>
           </div>
         </form>
       </section>

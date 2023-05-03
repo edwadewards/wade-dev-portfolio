@@ -1,22 +1,25 @@
+// Variable List 
+const slides = document.querySelectorAll('.portfolio-slide');
+const navBtn = document.querySelectorAll('.nav-btn');
+const projectImg = document.querySelectorAll('.project-img');
+const progress = document.querySelectorAll('.progress');
+const toggleContainer = document.querySelector('.full-container');
+
+
 // Full screen page section navigation
 function openSection(evt, section) {
-  const slides = document.getElementsByClassName('portfolio-slide');
   for(let x = 0; x < slides.length; x++) {
-    slides[x].style.opacity = '0';
+    slides[x].style.display = 'none';
   }
 
   for (let x = 0; x < navBtn.length; x++) {
     navBtn[x].className = navBtn[x].className.replace(" reveal", "");
   }
 
-  document.getElementById(section).style.opacity = '1';
-  document.getElementById(section).style.zIndex = '10';
+  document.getElementById(section).style.display = 'flex';
+  // document.getElementById(section).style.zIndex = '10';
   evt.currentTarget.className += ' reveal';
 }
-
-const navBtn = document.querySelectorAll('.nav-btn');
-const projectImg = document.querySelectorAll('.project-img');
-const progress = document.querySelectorAll('.progress');
 
 // Portfolio - manually control slideshow
 function displayProject(evt, identifier) {
@@ -28,9 +31,9 @@ function displayProject(evt, identifier) {
     progress[j].style.display = 'none';
   }
 
-  const projectBtn = document.querySelectorAll('.project-btn');
-  for (let i = 0; i < projectBtn.length; i++) {
-    projectBtn[i].className = projectBtn[i].className.replace(" active", "");
+  const projectLinks = document.querySelectorAll('.project-links');
+  for (let i = 0; i < projectLinks.length; i++) {
+    projectLinks[i].className = projectLinks[i].className.replace(" active", "");
   }
 
   document.getElementById(identifier).style.display = 'inline-block';
@@ -67,7 +70,7 @@ slideShow();
 
 navBtn.forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelector('.full-container').classList.add('explore-mode');
+    toggleContainer.classList.add('explore-mode');
   });
 });
 
@@ -98,6 +101,20 @@ observerOptions);
 
 fadeIn.forEach(element => {
   scrollsIn.observe(element);
+});
+
+// Toggle explore-mode class with screen size 
+function checkBreakpoint() {
+  if (window.innerWidth < 1400) {
+    toggleContainer.classList.remove('explore-mode');
+    slides.forEach(slide => {
+      slide.style.display = 'flex';
+    });
+  };
+}
+
+window.addEventListener('resize', () => {
+  checkBreakpoint();
 });
 
 

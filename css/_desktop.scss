@@ -1,9 +1,5 @@
 // Desktop only site styles - class added via JS
 .explore-mode {
-  // display: grid;
-  // grid-template-columns: 1fr 2fr;
-  
-
   .hero {
     width: 35%;
     transition: width 500ms linear;
@@ -11,7 +7,7 @@
 
   .slide-container {
     width: 65%;
-    transition: opacity 500ms 500ms linear;
+    // transition: opacity 500ms 500ms linear;
   }
 }
 

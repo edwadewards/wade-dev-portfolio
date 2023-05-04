@@ -78,6 +78,30 @@
   padding: 5rem 0;
 }
 
+.td-250 {
+  transition-delay: 250ms;
+}
+
+.td-500 {
+  transition-delay: 500ms;
+}
+
+.td-750 {
+  transition-delay: 750ms;
+}
+
+.td-1000 {
+  transition-delay: 1000ms;
+}
+
+.td-2000 {
+  transition-delay: 2000ms;
+}
+
+.td-3000 {
+  transition-delay: 3000ms;
+}
+
 .explore-mode .hero {
   width: 35%;
   transition: width 500ms linear;
@@ -185,6 +209,36 @@ h1, h2 {
   width: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.full-container {
+  display: none;
+}
+
+.loading-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  border: 12px solid #efefef;
+  z-index: 10;
+}
+.loading-animation .main-img {
+  translate: 0 4.5rem;
+  z-index: 11;
+}
+.loading-animation .animation-img {
+  translate: 1rem -3.5rem;
+}
+
+.fade-out {
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 3s ease;
 }
 
 .hero {

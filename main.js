@@ -4,7 +4,16 @@ const navBtn = document.querySelectorAll('.nav-btn');
 const projectImg = document.querySelectorAll('.project-img');
 const progress = document.querySelectorAll('.progress');
 const toggleContainer = document.querySelector('.full-container');
+const loadScreen = document.querySelector('.loading-animation');
+const everything = document.querySelector('.full-container');
 
+// Loading screen animation
+window.onload = function() {
+  setTimeout(function() {
+    loadScreen.classList.add('fade-out');
+    everything.style.display = 'block';
+  }, 3000)
+}
 
 // Full screen page section navigation
 function openSection(evt, section) {

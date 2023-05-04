@@ -33,3 +33,12 @@ $spaceamounts: (1, 2, 3, 4, 5);
     padding: #{$space}rem 0;
   }
 }
+
+$transitiondelays: (250, 500, 750, 1000, 2000, 3000);
+
+@each $delay in $transitiondelays {
+  // transition delay in ms
+  .td-#{$delay} {
+    transition-delay: #{$delay}ms;
+  }
+}

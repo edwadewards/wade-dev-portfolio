@@ -5,13 +5,13 @@ const projectImg = document.querySelectorAll('.project-img');
 const progress = document.querySelectorAll('.progress');
 const toggleContainer = document.querySelector('.full-container');
 const loadScreen = document.querySelector('.loading-animation');
-const everything = document.querySelector('.full-container');
+const hero = document.querySelector('.full-container');
 
 // Loading screen animation
 window.onload = function() {
   setTimeout(function() {
     loadScreen.classList.add('fade-out');
-    everything.style.display = 'block';
+    // hero.style.display = 'flex';
   }, 3000)
 }
 

@@ -205,14 +205,8 @@ h1, h2 {
 }
 
 .main-img {
-  border-radius: 50%;
-  width: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.full-container {
-  display: none;
 }
 
 .loading-animation {
@@ -232,7 +226,7 @@ h1, h2 {
   z-index: 11;
 }
 .loading-animation .animation-img {
-  translate: 1rem -3.5rem;
+  translate: 0.4rem -6rem;
 }
 
 .fade-out {
@@ -250,6 +244,7 @@ h1, h2 {
   justify-content: space-between;
   background-color: #103561;
   border: 12px solid #041c38;
+  transition-delay: 3.5s;
 }
 .hero header {
   color: #fff;

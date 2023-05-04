@@ -78,14 +78,7 @@ h1, h2 {
 }
 
 .main-img {
-  border-radius: 50%;
-  width: 200px;
   object-fit: cover;
-  // overflow: hidden;
-}
-
-.full-container {
-  display: none;
 }
 
 // Loading screen animation
@@ -100,8 +93,6 @@ h1, h2 {
   background-color: #fff;
   border: 12px solid #efefef;
   z-index: 10;
-  // opacity: 0;
-  // animation: animation 3s ease-out forwards;
 
   .main-img {
     translate: 0 4.5rem;
@@ -109,7 +100,7 @@ h1, h2 {
   }
 
   .animation-img {
-    translate: 1rem -3.5rem;
+    translate: .4rem -6rem;
   }
 }
 
@@ -129,7 +120,8 @@ h1, h2 {
   justify-content: space-between;
   background-color: $clr-primary;
   border: 12px solid $clr-primary-dark;
-  // transition-delay: 4s;
+  transition-delay: 3.5s;
+  // display: none;
 
   header {
     color: $text-light;

@@ -5,15 +5,23 @@ const projectImg = document.querySelectorAll('.project-img');
 const progress = document.querySelectorAll('.progress');
 const toggleContainer = document.querySelector('.full-container');
 const loadScreen = document.querySelector('.loading-animation');
-const hero = document.querySelector('.full-container');
+const portfolioSlides = document.querySelector('.slide-container');
 
-// Loading screen animation
-window.onload = function() {
-  setTimeout(function() {
-    loadScreen.classList.add('fade-out');
-    // hero.style.display = 'flex';
-  }, 3000)
-}
+// GSAP animations
+// const tween = TweenLite.to('.hero', 1, {
+//   width: '35%'
+// })
+
+const tl = new TimelineLite({paused: true});
+tl.from('.hero', {
+  width: '100%'
+}).to('.hero', 0.5, {
+  width: '35%',
+  ease: Power2.easeOut
+}).to('.slide-container', 0.7, {
+  opacity: '1',
+  ease: Power2.easeOut
+});
 
 // Full screen page section navigation
 function openSection(evt, section) {
@@ -80,6 +88,7 @@ slideShow();
 navBtn.forEach(btn => {
   btn.addEventListener('click', () => {
     toggleContainer.classList.add('explore-mode');
+    tl.play();
   });
 });
 

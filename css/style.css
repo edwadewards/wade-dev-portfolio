@@ -94,12 +94,12 @@
   transition-delay: 1000ms;
 }
 
-.td-2000 {
-  transition-delay: 2000ms;
+.td-1250 {
+  transition-delay: 1250ms;
 }
 
-.td-3000 {
-  transition-delay: 3000ms;
+.td-1500 {
+  transition-delay: 1500ms;
 }
 
 .explore-mode .hero {
@@ -112,7 +112,7 @@
 
 .fade-in {
   opacity: 0;
-  transition: opacity 200ms 300ms ease;
+  transition: opacity 300ms ease;
 }
 
 .fade-in.appear {
@@ -207,6 +207,7 @@ h1, h2 {
 .main-img {
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 88% 12% 93% 7%/7% 89% 11% 93%;
 }
 
 .loading-animation {
@@ -244,7 +245,6 @@ h1, h2 {
   justify-content: space-between;
   background-color: #103561;
   border: 12px solid #041c38;
-  transition-delay: 3.5s;
 }
 .hero header {
   color: #fff;
@@ -534,8 +534,7 @@ input:focus, textarea:focus {
   .slide-container {
     position: relative;
     height: 100%;
-    width: 0;
-    will-change: width;
+    opacity: 0;
   }
   .slide-container .portfolio-slide {
     position: absolute;

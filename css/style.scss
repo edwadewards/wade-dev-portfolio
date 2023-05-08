@@ -79,6 +79,7 @@ h1, h2 {
 
 .main-img {
   object-fit: cover;
+  border-radius: 88% 12% 93% 7% / 7% 89% 11% 93%;
 }
 
 // Loading screen animation
@@ -120,7 +121,7 @@ h1, h2 {
   justify-content: space-between;
   background-color: $clr-primary;
   border: 12px solid $clr-primary-dark;
-  transition-delay: 3.5s;
+  // transition-delay: 3.5s;
   // display: none;
 
   header {

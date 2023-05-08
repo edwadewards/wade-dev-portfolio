@@ -34,7 +34,7 @@ $spaceamounts: (1, 2, 3, 4, 5);
   }
 }
 
-$transitiondelays: (250, 500, 750, 1000, 2000, 3000);
+$transitiondelays: (250, 500, 750, 1000, 1250, 1500);
 
 @each $delay in $transitiondelays {
   // transition delay in ms

@@ -5,22 +5,18 @@ const projectImg = document.querySelectorAll('.project-img');
 const progress = document.querySelectorAll('.progress');
 const toggleContainer = document.querySelector('.full-container');
 const loadScreen = document.querySelector('.loading-animation');
-const portfolioSlides = document.querySelector('.slide-container');
 
 // GSAP animations
-// const tween = TweenLite.to('.hero', 1, {
-//   width: '35%'
-// })
-
 const tl = new TimelineLite({paused: true});
-tl.from('.hero', {
-  width: '100%'
-}).to('.hero', 0.5, {
-  width: '35%',
-  ease: Power2.easeOut
-}).to('.slide-container', 0.7, {
-  opacity: '1',
-  ease: Power2.easeOut
+tl.fromTo('.hero', 0.5, {
+  width: '100%',
+  ease: Power2.inOut,
+},
+{
+  width: '35%'
+}).to('.slide-container', 1, {
+  display: 'block',
+  ease: Power2.inOut
 });
 
 // Full screen page section navigation
@@ -34,7 +30,6 @@ function openSection(evt, section) {
   }
 
   document.getElementById(section).style.display = 'flex';
-  // document.getElementById(section).style.zIndex = '10';
   evt.currentTarget.className += ' reveal';
 }
 
@@ -98,7 +93,7 @@ const fadeIn = document.querySelectorAll('.fade-in');
 
 const observerOptions = {
   threshold: .6,
-  rootMargin: "0px 0px -40px 0px"
+  rootMargin: "0px 0px -20px 0px"
 };
 
 const scrollsIn = new IntersectionObserver
@@ -125,9 +120,13 @@ fadeIn.forEach(element => {
 function checkBreakpoint() {
   if (window.innerWidth < 1400) {
     toggleContainer.classList.remove('explore-mode');
+    document.querySelector('.slide-container').style.display = 'block';
     slides.forEach(slide => {
       slide.style.display = 'flex';
     });
+    tl.reverse();
+  } else {
+    openSection();
   };
 }
 

@@ -4,9 +4,10 @@ const navBtn = document.querySelectorAll('.nav-btn');
 const projectImg = document.querySelectorAll('.project-img');
 const progress = document.querySelectorAll('.progress');
 const toggleContainer = document.querySelector('.full-container');
-const loadScreen = document.querySelector('.loading-animation');
 
 // GSAP animations
+
+// -- Animation to show portfolio slide
 const tl = new TimelineLite({paused: true});
 tl.fromTo('.hero', 0.5, {
   width: '100%',
@@ -16,6 +17,13 @@ tl.fromTo('.hero', 0.5, {
   width: '35%'
 }).to('.slide-container', 1, {
   display: 'block',
+  ease: Power2.inOut
+});
+
+// -- Animation for hero section on window resize
+const tlResize = new TimelineLite({paused: true});
+tlResize.to('.hero', 0.5, {
+  width: '100%',
   ease: Power2.inOut
 });
 
@@ -118,20 +126,36 @@ fadeIn.forEach(element => {
 
 // Toggle explore-mode class with screen size 
 function checkBreakpoint() {
-  if (window.innerWidth < 1400) {
+  if(window.innerWidth < 1400) {
     toggleContainer.classList.remove('explore-mode');
     document.querySelector('.slide-container').style.display = 'block';
     slides.forEach(slide => {
       slide.style.display = 'flex';
     });
-    tl.reverse();
+    tlResize.play();
   } else {
+    tl.reverse();
     openSection();
   };
 }
 
 window.addEventListener('resize', () => {
   checkBreakpoint();
+});
+
+
+// Cursor
+const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', e => {
+  cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left:" + (e.pageX - 10) + "px;");
+});
+
+document.addEventListener('click', () => {
+  cursor.classList.add('expand');
+
+  setTimeout(() => {
+    cursor.classList.remove('expand');
+  }, 500)
 });
 
 

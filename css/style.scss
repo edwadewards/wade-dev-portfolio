@@ -95,68 +95,32 @@ h1, h2 {
 
 // Cursor styles
 .cursor {
-  width: 20px;
-  height: 20px;
-  border: 2px solid $text-light;
+  width: 10px;
+  height: 10px;
+  border: 1px solid $text-light;
   border-radius: 50%;
   position: absolute;
   pointer-events: none;
   z-index: 100;
-  // transition-duration: 200ms;
-  // transition-timing-function: ease-out;
-
-  animation: cursor .5s infinite alternate;
-
-  &::after {
-    content: '';
-    box-sizing: content-box;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    border: 6px solid black;
-    border-radius: 50%;
-    opacity: .5;
-    top: -8px;
-    left: -8px;
-    animation: cursorBorder .5s infinite alternate;
-  }
+  opacity: 0;
 }
 
 .expand {
-  animation: cursorClick .5s forwards;
-  border: 1px solid $clr-accent;
-  position: absolute;
-  top: -8px;
-  left: -148px;
+  animation: cursor .5s forwards;
 }
 
 @keyframes cursor {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(.7);
-  }
-}
-
-@keyframes cursorBorder {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(.4);
-  }
-}
-
-@keyframes cursorClick {
   0% {
+    opacity: 1;
+  }
+  10% {
     transform: scale(1);
   }
-  50% {
+
+  90% {
     transform: scale(3);
   }
   100% {
-    transform: scale(1);
     opacity: 0;
   }
 }

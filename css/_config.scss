@@ -42,3 +42,13 @@ $transitiondelays: (250, 500, 750, 1000, 1250, 1500);
     transition-delay: #{$delay}ms;
   }
 }
+
+
+// set color based on background 
+@function set-color($color) {
+  @if(lightness($color) > 50) {
+    @return $text-light;
+  } @else {
+    @return $text-dark;
+  }
+}

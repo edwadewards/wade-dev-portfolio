@@ -65,6 +65,12 @@
 
     .project-container {
       padding: 0;
+      border-radius: 0;
+
+      img {
+        border: 0;
+        border-radius: 0;
+      }
 
       .project-nav {
         font-size: .8rem;

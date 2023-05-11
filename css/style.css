@@ -597,6 +597,11 @@ input:focus, textarea:focus {
   }
   .portfolio .project-container {
     padding: 0;
+    border-radius: 0;
+  }
+  .portfolio .project-container img {
+    border: 0;
+    border-radius: 0;
   }
   .portfolio .project-container .project-nav {
     font-size: 0.8rem;

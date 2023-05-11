@@ -1,7 +1,8 @@
 .fade-in {
   opacity: 0;
-  transition: opacity 300ms ease;
-  // transition: opacity 200ms 300ms ease;
+  // transition: opacity 300ms ease;
+  @include delays(100, 0, 9);
+  transition: opacity 300ms 300ms ease;
 }
 
 .fade-in.appear {
@@ -15,4 +16,14 @@
 
 .slide-up.appear {
   translate: 0 0;
+}
+
+.scale-right {
+  scale: 0;
+  transition: 300ms ease;
+  transform-origin: left;
+}
+
+.scale-right.appear {
+  scale: 1;
 }

@@ -78,30 +78,6 @@
   padding: 5rem 0;
 }
 
-.td-250 {
-  transition-delay: 250ms;
-}
-
-.td-500 {
-  transition-delay: 500ms;
-}
-
-.td-750 {
-  transition-delay: 750ms;
-}
-
-.td-1000 {
-  transition-delay: 1000ms;
-}
-
-.td-1250 {
-  transition-delay: 1250ms;
-}
-
-.td-1500 {
-  transition-delay: 1500ms;
-}
-
 .explore-mode .hero {
   width: 35%;
 }
@@ -111,7 +87,37 @@
 
 .fade-in {
   opacity: 0;
-  transition: opacity 300ms ease;
+  transition: opacity 300ms 300ms ease;
+}
+.fade-in.delay-0 {
+  transition-delay: 0ms;
+}
+.fade-in.delay-100 {
+  transition-delay: 100ms;
+}
+.fade-in.delay-200 {
+  transition-delay: 200ms;
+}
+.fade-in.delay-300 {
+  transition-delay: 300ms;
+}
+.fade-in.delay-400 {
+  transition-delay: 400ms;
+}
+.fade-in.delay-500 {
+  transition-delay: 500ms;
+}
+.fade-in.delay-600 {
+  transition-delay: 600ms;
+}
+.fade-in.delay-700 {
+  transition-delay: 700ms;
+}
+.fade-in.delay-800 {
+  transition-delay: 800ms;
+}
+.fade-in.delay-900 {
+  transition-delay: 900ms;
 }
 
 .fade-in.appear {
@@ -125,6 +131,16 @@
 
 .slide-up.appear {
   translate: 0 0;
+}
+
+.scale-right {
+  scale: 0;
+  transition: 300ms ease;
+  transform-origin: left;
+}
+
+.scale-right.appear {
+  scale: 1;
 }
 
 *,

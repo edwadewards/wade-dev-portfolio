@@ -4,6 +4,7 @@ const navBtn = document.querySelectorAll('.nav-btn');
 const projectImg = document.querySelectorAll('.project-img');
 const progress = document.querySelectorAll('.progress');
 const toggleContainer = document.querySelector('.full-container');
+const contact = document.querySelector('.contact-btn');
 
 // GSAP animations
 
@@ -126,7 +127,7 @@ fadeIn.forEach(element => {
 
 // Toggle explore-mode class with screen size 
 function checkBreakpoint() {
-  if(window.innerWidth < 1400) {
+  if(window.innerWidth <= 1400) {
     toggleContainer.classList.remove('explore-mode');
     document.querySelector('.slide-container').style.display = 'block';
     slides.forEach(slide => {
@@ -134,7 +135,7 @@ function checkBreakpoint() {
     });
     tlResize.play();
   } else {
-    tl.reverse();
+    tlResize.reverse();
     openSection();
   };
 }

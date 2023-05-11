@@ -37,6 +37,10 @@
 
 
 @media (max-width: 500px) {
+  .full-container {
+    max-width: 100%;
+    overflow-y: hidden;
+  }
   .about {
     .card {
       display: flex;
@@ -44,6 +48,10 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+
+      img {
+        margin: .5rem auto;
+      }
     }
     .card-skills {
       display: grid;

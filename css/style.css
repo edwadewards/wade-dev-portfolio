@@ -572,12 +572,19 @@ input:focus, textarea:focus {
   }
 }
 @media (max-width: 500px) {
+  .full-container {
+    max-width: 100%;
+    overflow-y: hidden;
+  }
   .about .card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+  .about .card img {
+    margin: 0.5rem auto;
   }
   .about .card-skills {
     display: grid;

@@ -250,9 +250,12 @@ a:hover, .hero nav button:hover {
 
 // Portfolio Section
 .portfolio {
+  padding: 1rem;
+
   .project-container {
     background-color: $clr-primary;
     width: min(100%, 600px);
+    padding: 1rem;
     gap: .5rem;
     border-radius: 10px;
 

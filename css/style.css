@@ -372,9 +372,13 @@ a:hover, .hero nav button:hover {
   gap: 3.75rem;
 }
 
+.portfolio {
+  padding: 1rem;
+}
 .portfolio .project-container {
   background-color: #103561;
   width: min(100%, 600px);
+  padding: 1rem;
   gap: 0.5rem;
   border-radius: 10px;
 }
@@ -573,6 +577,7 @@ input:focus, textarea:focus {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
   .about .card-skills {
     display: grid;
@@ -580,7 +585,14 @@ input:focus, textarea:focus {
     place-items: center;
   }
   .portfolio {
-    width: calc(100% - 1rem);
+    width: 100%;
+    padding: 0;
+  }
+  .portfolio .project-container {
+    padding: 0;
+  }
+  .portfolio .project-container .project-nav {
+    font-size: 0.8rem;
   }
   .detail-group {
     display: flex;

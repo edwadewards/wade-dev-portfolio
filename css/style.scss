@@ -393,6 +393,8 @@ a:hover, .hero nav button:hover {
     padding: .25rem;
     font-size: 1rem;
     outline: 0;
+    -webkit-border-radius: 0; 
+    border-radius: 0;
   }
 
   .submit-btn {

@@ -57,9 +57,15 @@
             </button>
           </li>
           <li class="fade-in delay-500">
-            <button class="nav-btn portfolio-btn flex-center" onclick="openSection(event, 'portfolio')">
+            <button class="nav-btn portfolio-btn flex-center" onclick="openSection(event, 'projects')">
               <i class="fa-solid fa-lightbulb"></i>
-              <span class="text-uppercase">Portfolio</span>
+              <span class="text-uppercase">Projects</span>
+            </button>
+          </li>
+          <li class="fade-in delay-500">
+            <button class="nav-btn experience-btn flex-center" onclick="openSection(event, 'experience')">
+              <i class="fa-solid fa-briefcase"></i>
+              <span class="text-uppercase">Experience</span>
             </button>
           </li>
           <li class="fade-in delay-500">
@@ -122,8 +128,8 @@
                 <figcaption class="text-uppercase">Javascript</figcaption>
               </figure>
               <figure class="flex-center fade-in delay-600">
-                <img src="img/git.png" alt="git logo" height="60" class="my-2">
-                <figcaption class="text-uppercase">Git</figcaption>
+                <img src="img/figma.svg" alt="figma logo" height="60" class="my-2">
+                <figcaption class="text-uppercase">Figma</figcaption>
               </figure>
               <figure class="flex-center fade-in delay-700">
                 <img src="img/mailchimp.png" alt="mailchimp logo" height="60" class="my-2">
@@ -134,15 +140,16 @@
         </article>
       </section>
 
-      <section class="portfolio portfolio-slide flex-center" id="portfolio">
-        <h3 class="my-2">Portfolio Projects</h3>
+      <section class="portfolio portfolio-slide flex-center" id="projects">
+        <h3 class="my-2">Portfolio</h3>
+        <h4 class="text-highlight text-uppercase fade-in scale-right m-1 hide-desktop">Projects</h4>
         <div class="project-container flex-center">
           <div class="project-display">
-            <img src="img/dummy-preview.gif" alt="Preview of.." class="project-img fade-in" id="project-one">
-            <img src="img/dummy-preview-2.gif" alt="Preview of.." class="project-img fade-in" id="project-two">
-            <img src="img/dummy-preview-3.gif" alt="Preview of.." class="project-img fade-in" id="project-three">
-            <img src="img/dummy-preview-4.gif" alt="Preview of.." class="project-img fade-in" id="project-four">
-            <img src="img/dummy-preview-5.gif" alt="Preview of.." class="project-img fade-in" id="project-five">
+            <img src="img/nutsdotcom.gif" alt="Preview of nuts.com promo email" class="project-img fade-in" id="project-one">
+            <img src="img/ufc.gif" alt="Preview of UFC Promo Email" class="project-img fade-in" id="project-two">
+            <img src="img/amazon_receipt.gif" alt="Preview of Amazon Email Receipt" class="project-img fade-in" id="project-three">
+            <img src="img/astronomy.gif" alt="Preview of Astronomy Magazine Newsletter" class="project-img fade-in" id="project-four">
+            <img src="img/atlas_obscura.gif" alt="Preview of Atlas Obscura Newsletter" class="project-img fade-in" id="project-five">
           </div> 
           <nav class="project-nav flex-center">
             <div class="project-links fade-in slide-up" onclick="displayProject(event, 'project-one')">
@@ -151,12 +158,12 @@
                 <div class="left"></div>
                 <div class="right"></div>
               </div>
-              <button class="project-btn">Some Awesome Promo</button>
+              <button class="project-btn">Nuts.com Promotional Email</button>
               <div class="btn-group">
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://edwadewards.github.io/nutsdotcom/" target="_blank" rel="noopener noreferrer">
                   <i class="fa-solid fa-up-right-from-square"></i>
                 </a>
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/edwadewards/nutsdotcom" target="_blank" rel="noopener noreferrer">
                   <i class="fa-brands fa-github"></i>
                 </a>
               </div>
@@ -167,12 +174,12 @@
                 <div class="left"></div>
                 <div class="right"></div>
               </div>
-              <button class="project-btn">Brand New Promo</button>
+              <button class="project-btn">UFC Promotional Email</button>
               <div class="btn-group">
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://edwadewards.github.io/UFC-Promo/" target="_blank" rel="noopener noreferrer">
                   <i class="fa-solid fa-up-right-from-square"></i>
                 </a>
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/edwadewards/UFC-Promo" target="_blank" rel="noopener noreferrer">
                   <i class="fa-brands fa-github"></i>
                 </a>
               </div>
@@ -183,12 +190,12 @@
                 <div class="left"></div>
                 <div class="right"></div>
               </div>
-              <button class="project-btn">Nifty Newsletter</button>
+              <button class="project-btn">Amazon Transactional Email</button>
               <div class="btn-group">
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://edwadewards.github.io/amazon-email-receipt/" target="_blank" rel="noopener noreferrer">
                   <i class="fa-solid fa-up-right-from-square"></i>
                 </a>
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/edwadewards/amazon-email-receipt" target="_blank" rel="noopener noreferrer">
                   <i class="fa-brands fa-github"></i>
                 </a>
               </div>
@@ -199,12 +206,12 @@
                 <div class="left"></div>
                 <div class="right"></div>
               </div>
-              <button class="project-btn">Apple Transaction Receipt</button>
+              <button class="project-btn">Astronomy Magazine Newsletter</button>
               <div class="btn-group">
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://edwadewards.github.io/astronomy-magazine-email-newsletter/" target="_blank" rel="noopener noreferrer">
                   <i class="fa-solid fa-up-right-from-square"></i>
                 </a>
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/edwadewards/astronomy-magazine-email-newsletter" target="_blank" rel="noopener noreferrer">
                   <i class="fa-brands fa-github"></i>
                 </a>
               </div>
@@ -215,12 +222,12 @@
                 <div class="left"></div>
                 <div class="right"></div>
               </div>
-              <button class="project-btn">Daewoo TVs Promo</button>
+              <button class="project-btn">Atlas Obscura Newsletter</button>
               <div class="btn-group">
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://edwadewards.github.io/atlas-oscura-newsletter/" target="_blank" rel="noopener noreferrer">
                   <i class="fa-solid fa-up-right-from-square"></i>
                 </a>
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/edwadewards/atlas-oscura-newsletter" target="_blank" rel="noopener noreferrer">
                   <i class="fa-brands fa-github"></i>
                 </a>
               </div>
@@ -228,6 +235,49 @@
           </nav>
         </div>
         
+      </section>
+
+      <section class="experience flex-center portfolio-slide" id="experience">
+        <article class="flex-center m-1 page page-one active-page">
+          <h4 class="text-highlight text-uppercase fade-in scale-right m-1">Frontend Experience</h4>
+          <figure class="flex-center">
+            <img src="img/etrach.gif" alt="Preview for East Tennessee Relic and Coin Hunters website">
+            <figcaption>
+              <ul>
+                <li><em>Made With:</em></li>
+                <li class="border">HTML</li>
+                <li class="border">Sass</li>
+                <li class="border">Javascript</li>
+                <li class="border">Mailchimp</li>
+                <li class="border">Hosting</li>
+                <li>&</li>
+                <li class="heart-animation"><i class="fa-solid fa-heart"></i></li>
+                <li class="link"><a href="https://github.com/edwadewards/east-tennessee-relic-coin-hunters" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></li>
+              </ul>
+            </figcaption>
+          </figure>
+          <p class="fade-in slide-up">
+            The is the website I created for the <a href="https://www.etrac-h.com/" target="_blank" rel="noopener noreferrer">East Tennessee Relic & Coin Hunters</a>. I created this site completely from scratch and transferred their domain from Wix to Bihira.com, saving them around $100 annually. 
+          </p>
+          <button class="next-page m-2">Next Page <i class="fa-solid fa-arrow-right"></i></button>
+        </article>
+        <article class="flex-center py-1 page page-two">
+          <h4 class="text-highlight text-uppercase fade-in scale-right">HTML Email Experience</h4>
+          <div class="templates my-2">
+            <div class="template-slides">
+              <img src="img/etrach-funhunt.png" alt="HTML Email template" class="template-img onload-img fade-in" id="img-one">
+              <img src="img/etrach-membership.png" alt="HTML Email template" class="template-img fade-in" id="img-two">
+              <img src="img/etrach-officers.png" alt="HTML Email template" class="template-img fade-in" id="img-three">
+            </div>
+            <div class="slide-pagination">
+              <span class="slide-btn highlight" onclick="templateSlider(event, 'img-one')"></span>
+              <span class="slide-btn" onclick="templateSlider(event, 'img-two')"></span>
+              <span class="slide-btn" onclick="templateSlider(event, 'img-three')"></span>
+            </div>
+          </div>
+          <p class="fade-in slide-up">I set up email campaigns for the club with Mailchimp and used their template builder to create the easily editable templates featured above.</p>
+          <button class="prev-page m-2"><i class="fa-solid fa-arrow-left"></i> Prev Page</button>
+        </article>
       </section>
     
       <section class="contact p-1 flex-center portfolio-slide" id="contact">

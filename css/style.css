@@ -84,6 +84,11 @@
 .explore-mode .slide-container {
   width: 65%;
 }
+.explore-mode .experience .page-one {
+  display: flex;
+  opacity: 1;
+  transition: opacity 5s ease;
+}
 
 .fade-in {
   opacity: 0;
@@ -308,7 +313,7 @@ h1, h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3.75rem;
+  gap: 2.75rem;
 }
 .hero .portfolio-nav ul span {
   font-size: 0.75rem;
@@ -486,6 +491,112 @@ a:hover, .hero nav button:hover {
     transform: rotate(180deg);
   }
 }
+.experience img {
+  max-width: 100%;
+}
+.experience .page {
+  text-align: center;
+  margin: 0.5rem;
+}
+.experience .page a {
+  text-decoration: underline;
+}
+.experience figure {
+  width: min(100%, 760px);
+}
+.experience figure img {
+  box-shadow: 2px 2px 8px #ccc;
+}
+.experience figure figcaption ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.experience figure figcaption ul .border {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+}
+.experience figure figcaption ul li {
+  margin: 6px;
+  padding: 4px 8px;
+}
+.experience figure figcaption .heart-animation {
+  margin: 6px 6px 6px -12px;
+  animation: heartbeat 1s ease-in-out infinite;
+}
+.experience figure figcaption .heart-animation i {
+  color: #fa9e93;
+}
+.experience figure figcaption .link {
+  padding-left: 8px;
+  border-left: 2px solid #333;
+}
+.experience .templates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+}
+.experience .templates .template-slides {
+  position: relative;
+  width: 340px;
+  height: 504px;
+}
+.experience .templates .template-slides img {
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.experience .templates .template-slides .onload-img {
+  opacity: 1;
+}
+.experience .templates .slide-pagination {
+  display: flex;
+  gap: 4px;
+  width: 360px;
+  height: 6px;
+}
+.experience .templates .slide-pagination .slide-btn {
+  height: 100%;
+  width: 33%;
+  background-color: #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.5s linear;
+}
+.experience .templates .slide-pagination .slide-btn.highlight {
+  background-color: #103561;
+}
+.experience .prev-page, .experience .next-page {
+  cursor: pointer;
+  display: none;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.25);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .contact .detail-group {
   display: flex;
   align-items: flex-end;
@@ -569,6 +680,21 @@ input:focus, textarea:focus {
     right: 0;
     width: 100%;
     height: 100%;
+  }
+  .page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    display: none;
+    height: 100%;
+  }
+  .page .next-page, .page .prev-page {
+    display: inline-block;
+    align-self: flex-end;
+    justify-self: flex-end;
   }
 }
 @media (max-width: 500px) {

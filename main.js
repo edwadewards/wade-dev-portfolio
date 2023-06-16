@@ -101,8 +101,8 @@ navBtn.forEach(btn => {
 const fadeIn = document.querySelectorAll('.fade-in');
 
 const observerOptions = {
-  threshold: .6,
-  rootMargin: "0px 0px -20px 0px"
+  threshold: .3,
+  rootMargin: "0px 0px 0px 0px"
 };
 
 const scrollsIn = new IntersectionObserver
@@ -133,6 +133,10 @@ function checkBreakpoint() {
     slides.forEach(slide => {
       slide.style.display = 'flex';
     });
+    document.querySelectorAll('.page').forEach(page => {
+      page.style.display = 'flex';
+      page.style.opacity = '1';
+    });
     tlResize.play();
   } else {
     tlResize.reverse();
@@ -158,6 +162,46 @@ document.addEventListener('click', () => {
     cursor.classList.remove('expand');
   }, 500)
 });
+
+
+// email experience slider 
+function templateSlider(evt, imgNum) {
+  const templateSlides = document.getElementsByClassName('template-img');
+  for (let i = 0; i < templateSlides.length; i++) {
+  templateSlides[i].style.opacity = '0';
+  }
+
+  const slideBtn = document.querySelectorAll('.slide-btn');
+  for (let i = 0; i < slideBtn.length; i++) {
+    slideBtn[i].className = slideBtn[i].className.replace(" highlight", "");
+  }
+
+  document.getElementById(imgNum).style.opacity = '1';
+  evt.currentTarget.className += ' highlight';
+}
+
+
+// flip experience pages
+const pageOne = document.querySelector('.page-one');
+const pageTwo = document.querySelector('.page-two');
+document.querySelector('.next-page').addEventListener('click', () => {
+  pageTwo.style.opacity = '1';
+  pageTwo.style.display = 'flex';
+  pageOne.style.opacity = '0';
+  pageOne.style.display = 'none';
+
+  // checkBreakpoint();
+});
+
+document.querySelector('.prev-page').addEventListener('click', () => {
+  pageOne.style.opacity = '1';
+  pageOne.style.display = 'flex';
+  pageTwo.style.opacity = '0';
+  pageTwo.style.display = 'none';
+
+  // checkBreakpoint();
+});
+
 
 
 // Window height reset

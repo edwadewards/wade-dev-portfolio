@@ -9,6 +9,14 @@
     width: 65%;
     // transition: opacity 500ms 500ms linear;
   }
+
+  .experience {
+    .page-one {
+      display: flex;
+      opacity: 1;
+      transition: opacity 5s ease;
+    }
+  }
 }
 
 

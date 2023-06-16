@@ -696,6 +696,9 @@ input:focus, textarea:focus {
     align-self: flex-end;
     justify-self: flex-end;
   }
+  .page .next-page {
+    padding-top: 2rem;
+  }
 }
 @media (max-width: 500px) {
   .full-container {

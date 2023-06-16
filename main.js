@@ -202,6 +202,13 @@ document.querySelector('.prev-page').addEventListener('click', () => {
   // checkBreakpoint();
 });
 
+document.querySelector('.experience-btn').addEventListener('click', () => {
+  pageOne.style.opacity = '1';
+  pageOne.style.display = 'flex';
+  pageTwo.style.opacity = '0';
+  pageTwo.style.display = 'none';
+})
+
 
 
 // Window height reset

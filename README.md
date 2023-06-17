@@ -17,4 +17,4 @@ I really improved at writing semantic HTML and responsive CSS. I worked heavily 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/15f344c2-6661-4aaa-b9f8-d21dcd18264e/deploy-status)](https://app.netlify.com/sites/tool-house/deploys)
 
-![](https://github.com/edwadewards/tool-house/blob/main/wadecdev.netlify.app_.png)
+![](https://github.com/edwadewards/HTML-Email-Portfolio/blob/main/wadecdev.netlify.app_.png)

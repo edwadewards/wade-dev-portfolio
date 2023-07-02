@@ -1,7 +1,7 @@
-# HTML Email Portfolio
+# My Developer Portfolio
 ## About
 
-My HTML email developer portfolio site! I created this with HTML (of course), Sass, Javascript, GSAP, and <3
+My developer portfolio site! I created this with HTML (of course), Sass, Javascript, GSAP, and <3
 
 
 ## What I Learned From This Project
@@ -17,4 +17,4 @@ I really improved at writing semantic HTML and responsive CSS. I worked heavily 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/15f344c2-6661-4aaa-b9f8-d21dcd18264e/deploy-status)](https://app.netlify.com/sites/tool-house/deploys)
 
-![](https://github.com/edwadewards/HTML-Email-Portfolio/blob/main/wade-portfolio.png)
+![](https://github.com/edwadewards/wade-dev-portfolio/blob/main/wade-portfolio.png)

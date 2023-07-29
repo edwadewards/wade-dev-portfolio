@@ -101,7 +101,7 @@ navBtn.forEach(btn => {
 const fadeIn = document.querySelectorAll('.fade-in');
 
 const observerOptions = {
-  threshold: .3,
+  threshold: 0,
   rootMargin: "0px 0px 0px 0px"
 };
 
